@@ -11,7 +11,7 @@
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -20,119 +20,357 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" class="toggled">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#menu-toggle" class="btn btn-secondary" id="addRestaurant">Add restaurant</a>
+                    <button type="button" class="btn btn-success">Add restaurant</button>
                 </li>
             
-                <li class="sidebar-brand">
+                <li class="sidebar-brand profilePhoto">
                     <a href="#">
-                        Logo
+                        <img class="img-profile " src="./img/placeholder.jpg">
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">Profile</a>
+                    <a id="load_profile" href="#">Profile</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a id="load_overview" href="#">Overview</a>
                 </li>
                 <li>
-                    <a href="#">Content</a>
+                    <a id="load_content" href="#">Content</a>
                 </li>
                 <li>
-                    <a href="#">Wallet</a>
+                    <a id="load_wallet" href="#">Wallet</a>
                 </li>
                 <li>
-                    <a href="#">Members</a>
+                    <a id="load_members" href="#">Plan</a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper" class="partnersOverview">
-            <div class="container-fluid">
-                <h1>Partners overview</h1>            
-                <div class="row text-center">
-                    <div class="col-4">
-                        <span class="label">Basic</span>
+        <!-- Section Profile -->
+        <div id="sectionProfile">
+        </div>
+        <!-- Section Overview -->
+
+        <div id="sectionOverview">
+            <div class="page-content-wrapper overviewSelector">
+                <div class="container-fluid">
+                    <div class="row text-center tabSelector">
+                        <div class="col-4"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
+                        <div class="col-4"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
+                        <div class="col-4"><span id="restaurants_tab" class="sectionTab">Restaurants</span></div>
+
                     </div>
-                    <div class="col-4">
-                        <span class="label">Premium</span>
-                    </div>
-                    <div class="col-4">
-                        <span class="label">Growth</span>
-                    </div>                
                 </div>
-                <div class="row text-center">
-                    <div class="col-4">
-                        <span class="value" id="partnersBasic">10</span>
+            </div>  
+            <div class="page-content-wrapper partnersOverview">
+                <div class="container-fluid">
+                    <h3>Partners overview</h3>            
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <span class="label">Basic</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="label">Premium</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="label">Growth</span>
+                        </div>                
                     </div>
-                    <div class="col-4">
-                        <span class="value" id="partnersPremium">20</span>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <span class="value" id="partnersBasic">10</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="value" id="partnersPremium">20</span>
+                        </div>
+                        <div class="col-4">
+                            <span class="value" id="partnersGrowth">30</span>
+                        </div>                
+                    </div>            
+                </div>
+                <div class="container-fluid">
+                    <span class="label">Total reviews</span>  
+                    <div class="row">
+                        <div class="col-4">
+                            <span class="value" id="totalReviews">2000</span>
+                        </div>                  
                     </div>
-                    <div class="col-4">
-                        <span class="value" id="partnersGrowth">30</span>
-                    </div>                
-                </div>            
+                            
+                </div>
+                <div class="container-fluid">
+                    Map
+               
+                </div>
+            </div>       
+            <div class="page-content-wrapper reviewsOverview ">            
+                <div class="container-fluid ">
+                    <h3>Reviews overview</h3>    
+                    Graph3
+                </div>
+
+                <div class="container-fluid ">
+                    <div class="btn-group  float-right">
+                      <button type="button" class="btn btn-success">d</button>
+                      <button type="button" class="btn btn-muted">m</button>
+                      <button type="button" class="btn btn-muted">y</button>
+                    </div> 
+                    Graph2
+
+                </div>     
+                <div class="container-fluid ">
+                    <div class="row ">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="label">Tripadvisor total reviews</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="value" id="tripadvisorTotalReviews">10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="label">Google places total reviews</span>
+                                </div>
+                                <div class="col-8">
+                                    <span class="value" id="googleplacesTotalReviews">30</span>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>         
+                </div>
             </div>
-            <div class="container-fluid">
-                <h2>Total reviews</h2>  
-                <div class="row">
-                    <div class="col-4">
-                        <span class="value" id="totalReviews">2000</span>
+            <div class="page-content-wrapper rankingOverview">    
+                <div class="container-fluid ">
+                    <h3>Models ranking</h3>   
+                    <div class="btn-group  float-right">
+                      <button type="button" class="btn btn-success">d</button>
+                      <button type="button" class="btn btn-muted">m</button>
+                      <button type="button" class="btn btn-muted">y</button>
+                    </div> 
+                </div>                            
+                <div class="container-fluid">
+                    <div class="row">
+                        <table class="table modelsRanking">
+                          <tr class="headerModelsRanking">
+                            <th></th>
+                            <th></th>                      
+                            <th>Reviews</th>
+                            <th>Stories</th>
+                            <th>Earned</th>
+                            <th>Spent</th>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>Sunrina Porfirova</td>
+                            <td>150</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>48</td>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>Sunrina Porfirova</td>
+                            <td>150</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>48</td>
+                          </tr>
+                        </table>                
+                    </div>         
+                </div>  
+                <div class="container-fluid ">
+                    <h3>Restaurants ranking</h3>   
+                    <div class="btn-group  float-right">
+                      <button type="button" class="btn btn-success">d</button>
+                      <button type="button" class="btn btn-muted">m</button>
+                      <button type="button" class="btn btn-muted">y</button>
+                    </div> 
+                </div>                   
+                <div class="container-fluid">
+                    <div class="row">
+                        <table class="table restaurantsRanking">
+                          <tr class="headerRestaurantsRanking">
+                            <th></th>
+                            <th></th>                      
+                            <th>Visitors</th>
+                            <th>Review</th>
+                            <th>Credits</th>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>Sunrina Porfirova</td>
+                            <td>123</td>
+                            <td>55</td>
+                            <td>3000</td>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>La perla d'oro</td>
+                            <td>150</td>
+                            <td>1000</td>
+                            <td>500</td>
+                          </tr>
+                        </table>                
+                    </div>         
+                </div>           
+            </div>
+        </div>
+
+
+        <!-- Section Content -->
+        <div id="sectionContent">
+            <div class="page-content-wrapper contentTab">
+                <div class="container-fluid">
+                    <div class="row text-center tabSelector">
+                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
+                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
+                    </div>
+                </div>
+            </div>            
+            <div class="page-content-wrapper dailyContent">
+                <div class="container-fluid">
+                    <div class="row">
+                        <table class="table contentTable">
+                          <tr class="contentHeader">
+                            <th></th>
+                            <th></th>                      
+                            <th>Insta stories</th>
+                            <th>Insta posts</th>
+                            <th>Tripadvisor reviews</th>
+                            <th>Google places reviews</th>
+                            <th>Facebook reviews</th>
+                            <th>Balance</th>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>Bullona</td>
+                            <td>150</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>48</td>
+                            <td>500</td>
+                            <td>500</td>
+                          </tr>
+                        </table>                
+                    </div>         
+                </div> 
+            </div>    
+            <div class="page-content-wrapper fullrecordContent">
+                 <div class="container-fluid">
+                     <div class="row">
+                         <table class="table contentTable">
+                           <tr class="contentHeader">
+                             <th></th>
+                             <th></th>                      
+                             <th>Date</th>
+                             <th>Place</th>
+                             <th>Kind</th>
+                             <th>Name</th>
+                             <th>Reward</th>
+                             <th>Offer</th>
+                           </tr>
+                           <tr>
+                             <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                             <td>Sunrina Porfirova</td>
+                             <td>150</td>
+                             <td>1000</td>
+                             <td>500</td>
+                             <td>48</td>
+                             <td>500</td>
+                             <td>500</td>
+                           </tr>
+                         </table>                
+                     </div>         
+                 </div> 
+            </div>   
+
+        </div>
+        <div id="sectionWallet">
+            <div class="page-content-wrapper walletReport">
+                <div class="container-fluid ">
+                    <h3>Wallet</h3>            
+
+                    <div class="row">
+                        <div class="col-4">
+                            <span class="labelBlack">Credits given</span>
+                            <br>
+                            <span class="labelGray" id="credits_given">3000</span>    
+                        </div>  
+                        <div class="col-4">
+                            <span class="labelBlack">Credits back</span>
+                            <br>
+                            <span class="labelGray" id="credits_back">50</span>    
+                        </div>
+                        <div class="col-4">
+                            <span class="labelBlack">Maps reviews</span>
+                            <br>
+                            <span class="labelGray" id="maps_reviews">3000</span>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <span class="labelBlack">Insta Stories</span>
+                            <br>
+                            <span class="labelGray" id="insta_stories">2500</span>    
+                        </div>  
+                        <div class="col-4">
+                            <span class="labelBlack">Trip reviews</span>
+                            <br>
+                            <span class="labelGray" id="trip_reviews">50</span>    
+                        </div>
+                    </div>   
+                    <div class="row">
+                        <div class="col-4">
+                            <span class="labelBlack">Insta Posts</span>
+                            <br>
+                            <span class="labelGray" id="insta_posts">2500</span>    
+                        </div>  
+
                     </div>                  
                 </div>
-                        
             </div>
-            <div class="container-fluid">
-                Map
-           
-            </div>
-        </div>       
-        <div id="page-content-wrapper" class="reviewsOverview">            
-            <div class="container-fluid">
-                <h1>Reviews overview</h1>    
-                Graph1
-                Graph2
-                <div class="row">
-                    <div class="col-6">
-                        <span class="label">Tripadvisor total reviews</span>
-                        <span class="value" id="tripadvisorTotalReviews">10</span>
-                        
-                    </div>
-                    <div class="col-6">
-                        <span class="label">Google Places total reviews</span>
-                        <span class="value" id="googleplacesTotalReviews">30</span>
-                        
-                    </div>
-                    <div class="col-4">
-                        <span class="label">Growth</span>
-                    </div>                
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <span class="label" id="partnersBasic">10</span>
-                    </div>
-                    <div class="col-4">
-                        <span class="label" id="partnersPremium">20</span>
-                    </div>
-                    <div class="col-4">
-                        <span class="label" id="partnersGrowth">30</span>
-                    </div>                
-                </div>            
-            </div>
-            <div class="container-fluid">
-                Classifica
-           
-            </div>             
+            <div class="page-content-wrapper walletRanking">
+                <div class="container-fluid">
+                    <div class="row">
+                        <table class="table contentTable">
+                          <tr class="contentHeader">
+                            <th></th>
+                            <th></th>                      
+                            <th>Months</th>
+                            <th>Credits</th>
+                            <th>Plan</th>
+                            <th>Price</th>
+                          </tr>
+                          <tr>
+                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                            <td>Anastasia Kalaskowa</td>
+                            <td>123</td>
+                            <td>75</td>
+                            <td>55</td>
+                            <td>1200</td>
+                          </tr>
+                        </table>                
+                    </div>         
+                </div> 
+            </div> 
+
+
         </div>
-        <div id="page-content-wrapper" class="ranking">   
+
+
+
+        <div id="sectionPlan">
         </div>
 
         <!-- /#page-content-wrapper -->
@@ -143,12 +381,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
 
-        $("#wrapper").toggleClass("toggled");
-    </script>
 
 </body>
 
