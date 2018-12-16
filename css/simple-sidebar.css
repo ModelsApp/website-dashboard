@@ -229,6 +229,7 @@ h2{
 
 .modelsRanking td, .restaurantsRanking td{
    background-color: white;
+     border-bottom: 16px solid #f7f6fb;
    padding: 20px;
 }
 
