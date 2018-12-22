@@ -1523,7 +1523,8 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: middle;}
+  vertical-align: middle;
+  }
 
 .table thead th {
   vertical-align: bottom;}
