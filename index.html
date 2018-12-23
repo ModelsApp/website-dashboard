@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Admin panel</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -61,7 +61,7 @@
         <!-- Section Overview -->
 
         <div id="sectionOverview">
-            <div class="page-content-wrapper overviewSelector">
+            <div class="sticky-top overviewSelector ">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
                         <div class="col-4"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
@@ -72,8 +72,8 @@
                 </div>
             </div>  
             <div class="page-content-wrapper partnersOverview">
-                <div class="container-fluid">
-                    <h3>Partners overview</h3>            
+                <div class="container-fluid" id="overviewScroll">
+                    <h2>Partners overview</h2>            
                     <div class="row text-center">
                         <div class="col-4">
                             <span class="label">Basic</span>
@@ -114,56 +114,19 @@
             </div>       
             <div class="page-content-wrapper reviewsOverview ">            
                 <div class="container-fluid ">
-                    <h3>Reviews overview</h3>    
-                    Graph3
+                    <h2>Reviews overview</h2>    
                 </div>
-
                 <div class="container-fluid ">
-                    <div class="btn-group  float-right">
-                      <button type="button" class="btn btn-success">d</button>
-                      <button type="button" class="btn btn-muted">m</button>
-                      <button type="button" class="btn btn-muted">y</button>
-                    </div> 
-                    <canvas id="myChart" width="300" height="300"></canvas>
-                    <script>
-                    var ctx = document.getElementById("myChart").getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    </script>
+                    <div class="row">
+                        <div class="col-12">
+                             <div class="btn-group  float-right">
+                                  <button type="button" class="btn btn-success">d</button>
+                                  <button type="button" class="btn btn-muted">m</button>
+                               <button type="button" class="btn btn-muted">y</button>
+                             </div> 
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
                 </div>     
                 <div class="container-fluid ">
                     <div class="row ">
@@ -190,9 +153,9 @@
                     </div>         
                 </div>
             </div>
-            <div class="page-content-wrapper rankingOverview">    
-                <div class="container-fluid ">
-                    <h3>Models ranking</h3>   
+            <div class="page-content-wrapper rankingOverview" >    
+                <div class="container-fluid " id="rankingScroll">
+                    <h2>Models ranking</h2>   
                     <div class="btn-group  float-right">
                       <button type="button" class="btn btn-success">d</button>
                       <button type="button" class="btn btn-muted">m</button>
@@ -229,8 +192,8 @@
                         </table>                
                     </div>         
                 </div>  
-                <div class="container-fluid ">
-                    <h3>Restaurants ranking</h3>   
+                <div class="container-fluid " id="rankingRestaurants">
+                    <h2>Restaurants ranking</h2>   
                     <div class="btn-group  float-right">
                       <button type="button" class="btn btn-success">d</button>
                       <button type="button" class="btn btn-muted">m</button>
@@ -272,7 +235,7 @@
         <div id="sectionContent">
             <div class="page-content-wrapper contentTab">
                 <div class="container-fluid">
-                    <div class="row text-center tabSelector">
+                    <div class="row text-center">
                         <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
                         <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
                     </div>
@@ -338,40 +301,40 @@
         </div>
         <div id="sectionWallet">
             <div class="page-content-wrapper walletReport">
-                <div class="container-fluid ">
-                    <h3>Wallet</h3>            
+                <h2>Wallet</h2>            
 
+                <div class="container-fluid text-left walletContainer">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Credits given</span>
                             <br>
                             <span class="labelGray" id="credits_given"></span>    
                         </div>  
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Credits back</span>
                             <br>
                             <span class="labelGray" id="credits_back"></span>    
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Maps reviews</span>
                             <br>
                             <span class="labelGray" id="maps_reviews"></span>    
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Insta Stories</span>
                             <br>
                             <span class="labelGray" id="insta_stories"></span>    
                         </div>  
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Trip reviews</span>
                             <br>
                             <span class="labelGray" id="trip_reviews"></span>    
                         </div>
                     </div>   
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="labelBlack">Insta Posts</span>
                             <br>
                             <span class="labelGray" id="insta_posts"></span>    
@@ -422,6 +385,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/loadCharts.js"></script>
 
 
 

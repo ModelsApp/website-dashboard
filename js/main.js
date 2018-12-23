@@ -120,6 +120,55 @@ $.getJSON("./js/data.json",function(json){
 });
 
 
+$("#overview_tab").click(function() {
+    $(".sectionTab" ).removeClass("sectionTabSelected");
+    $("#overview_tab" ).addClass("sectionTabSelected");
+    scrollTo("overviewScroll");
+});
+
+$("#ranking_tab").click(function() {
+    $(".sectionTab" ).removeClass( "sectionTabSelected" );
+    $("#ranking_tab" ).addClass( "sectionTabSelected" );
+    scrollTo("rankingScroll");
+});
+
+$("#restaurants_tab").click(function() {
+    $(".sectionTab" ).removeClass( "sectionTabSelected" );
+    $("#restaurants_tab" ).addClass( "sectionTabSelected" );
+    scrollTo("rankingRestaurants");
+});
+
+$("#overview_res_tab").click(function() {
+    $(".sectionTab" ).removeClass("sectionTabSelected");
+    $("#overview_res_tab" ).addClass("sectionTabSelected");
+    scrollTo("overviewResScroll");
+});
+
+$("#reviews_res_tab").click(function() {
+    $(".sectionTab" ).removeClass( "sectionTabSelected" );
+    $("#reviews_res_tab" ).addClass( "sectionTabSelected" );
+    scrollTo("reviewsScroll");
+});
+
+$("#content_res_tab").click(function() {
+    $(".sectionTab" ).removeClass( "sectionTabSelected" );
+    $("#content_res_tab" ).addClass( "sectionTabSelected" );
+    scrollTo("contentScroll");
+});
+
+
+$("#content_res_tab").click(function() {
+
+  $("#dateSelector").datepicker();
+});
+
+
+function scrollTo(id){
+    var elmnt = document.getElementById(id);
+    elmnt.scrollIntoView(true);
+    window.scrollBy(0, -80);
+}
+
 
 function loadData(data){
 	//$( ".partnersBasic").text(data['partnersBasic']);

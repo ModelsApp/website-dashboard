@@ -8,12 +8,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Restaurant panel</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.structure.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -28,9 +30,6 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li>
-                    <button type="button" class="btn btn-success">Add restaurant</button>
-                </li>
                 <h2 id="restaurant_name"></h2>
 
                 <li class="sidebar-brand profilePhoto">
@@ -63,18 +62,19 @@
         </div>
         <!-- Section Overview -->
         <div id="sectionOverviewRes">
-            <div class="page-content-wrapper overviewSelector">
+            <div class="sticky-top overviewSelector">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
                         <div class="col-4"><span id="overview_res_tab" class="sectionTab sectionTabSelected">Overview<span></div>
-                        <div class="col-4"><span id="ranking_res_tab" class="sectionTab">Reviews</span></div>
+                        <div class="col-4"><span id="reviews_res_tab" class="sectionTab">Reviews</span></div>
                         <div class="col-4"><span id="content_res_tab" class="sectionTab">Content</span></div>
                     </div>
                 </div>
             </div>  
             <div class="page-content-wrapper activitiesOverview">
-                <h3>Activities overview</h3>            
-                <div class="container-fluid">
+                <div class="container-fluid" id="overviewResScroll">
+                    <h2>Activities overview</h2>            
+
                     <div class="row text-center">
                         <div class="col-4">
                             <span class="label">Insta Stories</span>
@@ -122,23 +122,44 @@
 
             <div class="page-content-wrapper visitorsOverviewRes ">            
 
-                <h3>Visitors</h3>            
                 <div class="container-fluid">
+                    <h2>Visitors</h2>            
+                    <span class="label">Total models </span>  
+                    <span class="value" id="totalModels"></span>
+
                     <div class="row">
-                        <span class="label">Total models</span>  
 
                         <div class="col-4">
 
-                            <span class="value" id="totalModels"></span>
                         </div>                  
                     </div>
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-12">
+                                 <div class="btn-group  float-right">
+                                      <button type="button" class="btn btn-success">d</button>
+                                      <button type="button" class="btn btn-muted">m</button>
+                                   <button type="button" class="btn btn-muted">y</button>
+                                 </div> 
+                                <canvas id="visitorsChart"></canvas>
+                            </div>
+                        </div>
+                    </div> 
                          
                 </div>
             </div>       
             <div class="page-content-wrapper offersOverviewRes">    
-                <h3>Offers</h3>   
-                <span class="label">Babymodel</span>
                 <div class="container-fluid" id="rank_babymodel">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Offers</h2>   
+                        </div>
+                        <div class="col-6">
+                            <i class="fas fa-pen" id="editOffers"></i>
+                        </div>
+                    </div>
+                    <span class="label">Babymodel</span>
+
                     <div class="row offersRow">
                         <div class="col-3">
                             <div class="card " style="width: 20rem;">
@@ -158,12 +179,11 @@
                               </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-                <span class="label">Good model magnet</span>
                 <div class="container-fluid" id="rank_modelmagnet">
+                    <span class="label">Good model magnet</span>
+
                     <div class="row offersRow">
                         <div class="col-3">
                             <div class="card " style="width: 20rem;">
@@ -194,27 +214,30 @@
                         </div>
                     </div>
                 </div>
-                <span class="label">Supermodel</span>
                 <div class="container-fluid" id="rank_supermodel">
+                    <span class="label">Supermodel</span>
+
                     <div class="row offersRow">
                     </div>
                 </div>
-                <span class="label">Babyplus</span>
                 <div class="container-fluid" id="rank_babyplus">
+                    <span class="label">Babyplus</span>
+
                     <div class="row offersRow">
                     </div>
                 </div>
-                <span class="label">Review elite</span>
                 <div class="container-fluid" id="rank_reviewelite">
+                    <span class="label">Review elite</span>
                     <div class="row offersRow">
                     </div>
                 </div>
             </div>
-            <div class="page-content-wrapper contentTab">
-                <div class="container-fluid">
-                    <div class="row text-center tabSelector">
-                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Tripadvisor<span></div>
-                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Google Places Post</span></div>
+
+            <div class="page-content-wrapper">
+                <div class="container-fluid" id="reviewsScroll">
+                    <div class="row text-center">
+                        <div class="col-6"><span id="" class=" sectionTab sectionTabSelected ">Tripadvisor<span></div>
+                        <div class="col-6"><span id="" class="sectionTab">Google Places Post</span></div>
                     </div>
                 </div>
             </div>     
@@ -228,34 +251,50 @@
                 </div>                            
                 <div class="container-fluid">
                     <div class="row">
-                        <table class="table modelsRanking">
-                          <tr class="headerModelsRanking">
-                            <th></th>
-                            <th></th>                      
-                            <th>Reviews</th>
-                            <th>Stories</th>
-                            <th>Earned</th>
-                            <th>Spent</th>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Sunrina Porfirova</td>
-                            <td>150</td>
-                            <td>1000</td>
-                            <td>500</td>
-                            <td>48</td>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Sunrina Porfirova</td>
-                            <td>150</td>
-                            <td>1000</td>
-                            <td>500</td>
-                            <td>48</td>
-                          </tr>
-                        </table>                
-                    </div>         
+                        <div class="col-12">
+                            <table class="table modelsRanking">
+                              <tr class="headerModelsRanking">
+                                <th></th>
+                                <th></th>                      
+                                <th>Reviews</th>
+                                <th>Stories</th>
+                                <th>Earned</th>
+                                <th>Spent</th>
+                              </tr>
+                              <tr>
+                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                <td>Sunrina Porfirova</td>
+                                <td>150</td>
+                                <td>1000</td>
+                                <td>500</td>
+                                <td>48</td>
+                              </tr>
+                              <tr>
+                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                <td>Sunrina Porfirova</td>
+                                <td>150</td>
+                                <td>1000</td>
+                                <td>500</td>
+                                <td>48</td>
+                              </tr>
+                            </table>       
+                        </div>         
+                    </div>    
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <i class="fas fa-chevron-down" id="modelsRankingMore"></i>
+                        </div>
+                    </div>     
                 </div>  
+            </div>
+            <div class="page-content-wrapper" id="contentScroll">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        <div class="col-12"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Restaurant content<span></div>
+                    </div>
+                </div>
+            </div> 
+            <div class="page-content-wrapper rankingOverviewRes">
                 <div class="container-fluid ">
                     <div class="btn-group  float-right">
                       <button type="button" class="btn btn-success">d</button>
@@ -281,6 +320,11 @@
                             <td>3000</td>
                           </tr>
                         </table>                
+                    </div> 
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <i class="fas fa-chevron-down" id="modelsRankingMore"></i>
+                        </div>
                     </div>         
                 </div>           
             </div>        
@@ -297,8 +341,16 @@
             </div>      
             <div class="page-content-wrapper">
                 <div class="container-fluid text-center">
+                    <!---
+                    <div class="row">
+                        <input type="text" class="dateSelected"id="dateSelector" value="13/07/2018">
+                        <div> <i class="fas fa-chevron-down" ></i></div>
+                    </div>
+
+
+                    ---->
                     <span class="dateSelected">3rd July</span>
-                    <i class="fas fa-chevron-down" id="dateSelector"></i>
+                    <div id=""> <i class="fas fa-chevron-down" ></i></div>
                 </div>
             </div>          
             <div class="page-content-wrapper">
@@ -328,8 +380,6 @@
 
         </div>
 
-
-
         <!-- /#page-content-wrapper -->
 
     </div>
@@ -337,11 +387,12 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery/jquery-ui.min.js"></script>
-
+    <script src="vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/restaurantpanel.js"></script>
+    <script src="js/main.js"></script>
 
+    <script src="js/restaurantpanel.js"></script>
+    <script src="js/loadCharts.js"></script>
 
 
 </body>
