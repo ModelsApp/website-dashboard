@@ -217,6 +217,18 @@ h2{
    background-color: #f7f6fb;
     
 }
+.activitiesOverview{
+   background-color: #f7f6fb;
+
+}
+.offersRes{
+   background-color: #f7f6fb;
+
+}
+.activityOverviewRes{
+
+
+}
 
 /******Ranking*********************/
 .rankingOverview{
@@ -232,7 +244,7 @@ h2{
 
 .modelsRanking td, .restaurantsRanking td{
    background-color: white;
-     border-bottom: 16px solid #f7f6fb;
+  border-bottom: 16px solid #f7f6fb;
    padding: 20px;
 }
 
@@ -247,3 +259,52 @@ h2{
 
 }
 
+
+
+/***************Restaurant panel*****************/
+
+
+#restaurant_name{
+  color: black!important;
+
+}
+
+
+.activitiesOverviewRes, .visitorsOverviewRes, .rankingOverviewRes {
+  background-color: #f7f6fb;
+  
+}
+
+/**********Offers section************************/
+
+.offersRow{
+  padding:20px;
+
+}
+
+.card-label{
+  color:purple;
+  font-weight:bold;
+}
+
+#sectionContentRes{
+    background-color: #f7f6fb;
+
+}
+
+
+.dateSelected{
+  font-size: 2rem;
+  padding-right: 20px;
+}
+
+/********Content section*****************/
+.modelsRanking tr, .restaurantsRanking tr{
+   background-color: white;
+}
+
+.contentResTable td, .contentResTable td{
+   background-color: white;
+  border-bottom: 16px solid #f7f6fb;
+   padding: 20px;
+}

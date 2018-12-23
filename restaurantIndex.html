@@ -12,6 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -29,7 +31,8 @@
                 <li>
                     <button type="button" class="btn btn-success">Add restaurant</button>
                 </li>
-            
+                <h2 id="restaurant_name"></h2>
+
                 <li class="sidebar-brand profilePhoto">
                     <a href="#">
                         <img class="img-profile " src="./img/placeholder.jpg">
@@ -38,6 +41,9 @@
 
                 <li>
                     <a id="load_profile_res" href="#">Profile</a>
+                </li>
+                <li>
+                    <a id="load_overview_res" href="#">Overview</a>
                 </li>
                 <li>
                     <a id="load_content_res" href="#">Content</a>
@@ -53,26 +59,22 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Section Profile -->
-        <div id="sectionProfile">
+        <div id="sectionProfileRes">
         </div>
         <!-- Section Overview -->
-
-        <div id="sectionOverview">
+        <div id="sectionOverviewRes">
             <div class="page-content-wrapper overviewSelector">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
                         <div class="col-4"><span id="overview_res_tab" class="sectionTab sectionTabSelected">Overview<span></div>
                         <div class="col-4"><span id="ranking_res_tab" class="sectionTab">Reviews</span></div>
                         <div class="col-4"><span id="content_res_tab" class="sectionTab">Content</span></div>
-
                     </div>
                 </div>
             </div>  
-            <div class="page-content-wrapper activityOverviewRes">
+            <div class="page-content-wrapper activitiesOverview">
+                <h3>Activities overview</h3>            
                 <div class="container-fluid">
-
-
-                    <h3>Partners overview</h3>            
                     <div class="row text-center">
                         <div class="col-4">
                             <span class="label">Insta Stories</span>
@@ -112,106 +114,112 @@
                             <span class="value" id="googlemaps_res"></span>
                         </div>
                         <div class="col-4">
-                            <span class="value" id="facebook__Res"></span>
+                            <span class="value" id="facebook_res"></span>
                         </div>                
                     </div>        
                 </div>
-                <div class="container-fluid">
+            </div>
 
-                    <span class="label">Total reviews</span>  
+            <div class="page-content-wrapper visitorsOverviewRes ">            
+
+                <h3>Visitors</h3>            
+                <div class="container-fluid">
                     <div class="row">
+                        <span class="label">Total models</span>  
+
                         <div class="col-4">
-                            <span class="value" id="totalReviews"></span>
+
+                            <span class="value" id="totalModels"></span>
                         </div>                  
                     </div>
-                            
-                </div>
-                <div class="container-fluid">
-                    Map
-               
+                         
                 </div>
             </div>       
-            <div class="page-content-wrapper reviewsOverview ">            
-                <div class="container-fluid ">
-                    <h3>Reviews overview</h3>    
-                    Graph3
-                </div>
-
-                <div class="container-fluid ">
-                    <div class="btn-group  float-right">
-                      <button type="button" class="btn btn-success">d</button>
-                      <button type="button" class="btn btn-muted">m</button>
-                      <button type="button" class="btn btn-muted">y</button>
-                    </div> 
-                    <canvas id="myChart" width="300" height="300"></canvas>
-                    <script>
-                    var ctx = document.getElementById("myChart").getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    </script>
-                </div>     
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-6">
-                            <div class="row">
-                                <div class="col-4">
-                                    <span class="label">Tripadvisor total reviews</span>
-                                </div>
-                                <div class="col-8">
-                                    <span class="value" id="tripadvisorTotalReviews">10</span>
-                                </div>
+            <div class="page-content-wrapper offersOverviewRes">    
+                <h3>Offers</h3>   
+                <span class="label">Babymodel</span>
+                <div class="container-fluid" id="rank_babymodel">
+                    <div class="row offersRow">
+                        <div class="col-3">
+                            <div class="card " style="width: 20rem;">
+                              <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Ossomaki 3 pieces</h5>
+                                <p class="card-label">38 credits</p>
+                              </div>
+                            </div>                            
+                        </div>
+                        <div class="col-3">
+                            <div class="card " style="width: 20rem;">
+                              <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Futumaki 3 pieces</h5>
+                                <p class="card-label">18 credits</p>
+                              </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="row">
-                                <div class="col-4">
-                                    <span class="label">Google places total reviews</span>
-                                </div>
-                                <div class="col-8">
-                                    <span class="value" id="googleplacesTotalReviews">30</span>
-                                </div>
+
+                    </div>
+
+                </div>
+                <span class="label">Good model magnet</span>
+                <div class="container-fluid" id="rank_modelmagnet">
+                    <div class="row offersRow">
+                        <div class="col-3">
+                            <div class="card " style="width: 20rem;">
+                              <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Ossomaki 3 pieces</h5>
+                                <p class="card-label">38 credits</p>
+                              </div>
+                            </div>                            
+                        </div>
+                        <div class="col-3">
+                            <div class="card " style="width: 20rem;">
+                              <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Futumaki 3 pieces</h5>
+                                <p class="card-label">18 credits</p>
+                              </div>
                             </div>
-                        </div>        
-                    </div>         
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 20rem;">
+                              <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Beef 3 pieces</h5>
+                                <p class="card-label">18 credits</p> 
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="label">Supermodel</span>
+                <div class="container-fluid" id="rank_supermodel">
+                    <div class="row offersRow">
+                    </div>
+                </div>
+                <span class="label">Babyplus</span>
+                <div class="container-fluid" id="rank_babyplus">
+                    <div class="row offersRow">
+                    </div>
+                </div>
+                <span class="label">Review elite</span>
+                <div class="container-fluid" id="rank_reviewelite">
+                    <div class="row offersRow">
+                    </div>
                 </div>
             </div>
-            <div class="page-content-wrapper rankingOverview">    
+            <div class="page-content-wrapper contentTab">
+                <div class="container-fluid">
+                    <div class="row text-center tabSelector">
+                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Tripadvisor<span></div>
+                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Google Places Post</span></div>
+                    </div>
+                </div>
+            </div>     
+            <div class="page-content-wrapper rankingOverviewRes">    
                 <div class="container-fluid ">
-                    <h3>Models ranking</h3>   
                     <div class="btn-group  float-right">
                       <button type="button" class="btn btn-success">d</button>
                       <button type="button" class="btn btn-muted">m</button>
@@ -249,7 +257,6 @@
                     </div>         
                 </div>  
                 <div class="container-fluid ">
-                    <h3>Restaurants ranking</h3>   
                     <div class="btn-group  float-right">
                       <button type="button" class="btn btn-success">d</button>
                       <button type="button" class="btn btn-muted">m</button>
@@ -268,74 +275,41 @@
                           </tr>
                           <tr>
                             <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Sunrina Porfirova</td>
+                            <td>La perla d'oro</td>
                             <td>123</td>
                             <td>55</td>
                             <td>3000</td>
                           </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>La perla d'oro</td>
-                            <td>150</td>
-                            <td>1000</td>
-                            <td>500</td>
-                          </tr>
                         </table>                
                     </div>         
                 </div>           
-            </div>
+            </div>        
+
         </div>
 
-
-        <!-- Section Content -->
-        <div id="sectionContent">
+        <div id="sectionContentRes">
             <div class="page-content-wrapper contentTab">
                 <div class="container-fluid">
-                    <div class="row text-center tabSelector">
-                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
-                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
+                    <div class="row">
+                        <h2>160 total posts</h2>
                     </div>
                 </div>
-            </div>            
-            <div class="page-content-wrapper dailyContent">
-                <div class="container-fluid">
-                    <div class="row">
-                        <table class="table contentTable">
-                          <tr class="contentHeader">
-                            <th></th>
-                            <th></th>                      
-                            <th>Insta stories</th>
-                            <th>Insta posts</th>
-                            <th>Tripadvisor reviews</th>
-                            <th>Google places reviews</th>
-                            <th>Facebook reviews</th>
-                            <th>Balance</th>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Bullona</td>
-                            <td>150</td>
-                            <td>1000</td>
-                            <td>500</td>
-                            <td>48</td>
-                            <td>500</td>
-                            <td>500</td>
-                          </tr>
-                        </table>                
-                    </div>         
-                </div> 
-            </div>    
-            <div class="page-content-wrapper fullrecordContent">
+            </div>      
+            <div class="page-content-wrapper">
+                <div class="container-fluid text-center">
+                    <span class="dateSelected">3rd July</span>
+                    <i class="fas fa-chevron-down" id="dateSelector"></i>
+                </div>
+            </div>          
+            <div class="page-content-wrapper">
                  <div class="container-fluid">
                      <div class="row">
-                         <table class="table contentTable">
+                         <table class="table contentResTable">
                            <tr class="contentHeader">
                              <th></th>
                              <th></th>                      
                              <th>Date</th>
-                             <th>Place</th>
                              <th>Kind</th>
-                             <th>Name</th>
                              <th>Reward</th>
                              <th>Offer</th>
                            </tr>
@@ -346,8 +320,6 @@
                              <td>1000</td>
                              <td>500</td>
                              <td>48</td>
-                             <td>500</td>
-                             <td>500</td>
                            </tr>
                          </table>                
                      </div>         
@@ -355,82 +327,8 @@
             </div>   
 
         </div>
-        <div id="sectionWallet">
-            <div class="page-content-wrapper walletReport">
-                <div class="container-fluid ">
-                    <h3>Wallet</h3>            
-
-                    <div class="row">
-                        <div class="col-4">
-                            <span class="labelBlack">Credits given</span>
-                            <br>
-                            <span class="labelGray" id="credits_given"></span>    
-                        </div>  
-                        <div class="col-4">
-                            <span class="labelBlack">Credits back</span>
-                            <br>
-                            <span class="labelGray" id="credits_back"></span>    
-                        </div>
-                        <div class="col-4">
-                            <span class="labelBlack">Maps reviews</span>
-                            <br>
-                            <span class="labelGray" id="maps_reviews"></span>    
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <span class="labelBlack">Insta Stories</span>
-                            <br>
-                            <span class="labelGray" id="insta_stories"></span>    
-                        </div>  
-                        <div class="col-4">
-                            <span class="labelBlack">Trip reviews</span>
-                            <br>
-                            <span class="labelGray" id="trip_reviews"></span>    
-                        </div>
-                    </div>   
-                    <div class="row">
-                        <div class="col-4">
-                            <span class="labelBlack">Insta Posts</span>
-                            <br>
-                            <span class="labelGray" id="insta_posts"></span>    
-                        </div>  
-
-                    </div>                  
-                </div>
-            </div>
-            <div class="page-content-wrapper walletRanking">
-                <div class="container-fluid">
-                    <div class="row">
-                        <table class="table contentTable">
-                          <tr class="contentHeader">
-                            <th></th>
-                            <th></th>                      
-                            <th>Months</th>
-                            <th>Credits</th>
-                            <th>Plan</th>
-                            <th>Price</th>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Anastasia Kalaskowa</td>
-                            <td>123</td>
-                            <td>75</td>
-                            <td>55</td>
-                            <td>1200</td>
-                          </tr>
-                        </table>                
-                    </div>         
-                </div> 
-            </div> 
 
 
-        </div>
-
-
-
-        <div id="sectionPlan">
-        </div>
 
         <!-- /#page-content-wrapper -->
 
@@ -439,8 +337,10 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/restaurantpanel.js"></script>
 
 
 

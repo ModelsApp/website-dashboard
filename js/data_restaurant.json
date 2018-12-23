@@ -1,10 +1,10 @@
 {
-  "partnersBasic": "10",
-  "partnersPremium": "20",
-  "partnersGrowth": "30",
-  "totalReviews": "2000",
-  "tripadvisorTotalReviews": "10",
-  "googleplacesTotalReviews": "30",
+  "intastories_res": "10",
+  "instaposts_res": "20",
+  "tripadvisor_res": "30",
+  "googlemaps_res": "50",
+  "facebook_res": "10",
+  "totalModels": "30",
   "modelsRanking": {
     "0": {
       "photo": "photo.jpg",
