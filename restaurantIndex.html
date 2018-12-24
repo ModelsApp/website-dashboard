@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <script src="js/Chart.js"></script>
 
 </head>
 
@@ -137,11 +136,11 @@
                         <div class="row">
                             <div class="col-12">
                                  <div class="btn-group  float-right">
-                                      <button type="button" class="btn btn-success">d</button>
-                                      <button type="button" class="btn btn-muted">m</button>
-                                   <button type="button" class="btn btn-muted">y</button>
+                                      <button type="button" class="btn btn-graph-selected btn-graph">d</button>
+                                      <button type="button" class="btn btn-muted btn-graph">m</button>
+                                   <button type="button" class="btn btn-muted btn-graph">y</button>
                                  </div> 
-                                <canvas id="visitorsChart"></canvas>
+                            <canvas id="myChart"></canvas>
                             </div>
                         </div>
                     </div> 
@@ -244,9 +243,9 @@
             <div class="page-content-wrapper rankingOverviewRes">    
                 <div class="container-fluid ">
                     <div class="btn-group  float-right">
-                      <button type="button" class="btn btn-success">d</button>
-                      <button type="button" class="btn btn-muted">m</button>
-                      <button type="button" class="btn btn-muted">y</button>
+                      <button type="button" class="btn btn-graph-selected btn-graph">d</button>
+                      <button type="button" class="btn btn-muted btn-graph">m</button>
+                      <button type="button" class="btn btn-muted btn-graph">y</button>
                     </div> 
                 </div>                            
                 <div class="container-fluid">
@@ -297,7 +296,7 @@
             <div class="page-content-wrapper rankingOverviewRes">
                 <div class="container-fluid ">
                     <div class="btn-group  float-right">
-                      <button type="button" class="btn btn-success">d</button>
+                      <button type="button" class="btn btn-graph-selected">d</button>
                       <button type="button" class="btn btn-muted">m</button>
                       <button type="button" class="btn btn-muted">y</button>
                     </div> 
@@ -392,7 +391,9 @@
     <script src="js/main.js"></script>
 
     <script src="js/restaurantpanel.js"></script>
-    <script src="js/loadCharts.js"></script>
+    <script src="js/Chart.js"></script>
+
+    <script src="js/loadChartsRes.js"></script>
 
 
 </body>

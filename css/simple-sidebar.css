@@ -147,6 +147,16 @@ h2{
 
 }
 
+
+.btn-graph-selected{
+    background-color: #c6c6c6!important;
+    color: white!important;
+}
+.btn-graph{
+    width: 80px;
+    color: #8e8e8e;
+    background-color: #ededed;
+}
 .fas {
   color:#87cf7f;
 }
