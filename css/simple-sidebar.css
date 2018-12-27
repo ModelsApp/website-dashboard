@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  font-family: Arial;
 }
 
 #wrapper {
@@ -73,6 +74,7 @@ body {
   display: block;
   text-decoration: none;
   color: #000000;
+  font-size: 24px;
 }
 
 .sidebar-nav li a:hover {
@@ -174,6 +176,11 @@ h2{
     color: black;
     font-size: 1.5rem;
 }
+
+.labelPink{
+  font-size: 24px;
+  color: #fad0c2;
+}
 .value{
     color: #87cf7f;
     font-size: 1.5rem;
@@ -182,8 +189,8 @@ h2{
 }
 .container-fluid {
     width: 100%;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 20px;
@@ -226,10 +233,12 @@ h2{
   margin-bottom: 30px;
 }
 
-
+.pinkText {
+  color:#ffb8be;
+}
 /**********Sections********************/
 #sectionContent{
-    display: : none;
+    display: none;
 }
 /*******Partners Overview section*******/
 
@@ -291,9 +300,212 @@ h2{
   background-color: #f7f6fb;
 
 }
+/**********Members section************************/
+.members{
+  background-color: #f7f6fb;
+}
+
+.memberName {
+  color:#fad1a9;
+  border-bottom: 1px solid #fad1a9;
+
+}
+
+.usersTable {
+  border-collapse: separate;
+
+}
+.usersTable td{
+  background-color: white;
+    border: 5px solid #f7cbc8;
+    border-left: none;
+    border-right: none;
+  text-align: center;
+
+}
+.usersTable td:last-child{
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+
+  border: 5px solid #f7cbc8;
+  border-left: none;
+
+}
+.usersTable td:first-child{
+  background-color: transparent;
+
+  border: none;
+
+}
+
+.usersTable td:nth-child(2){
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+
+  border: 5px solid #f7cbc8;
+  border-right: none;
+
+}
+.usersTable th{
+  color: #8d8d8d;
+  font-size: 24px!important;
+  font-weight: 400!important;
+  text-align: center;
+
+}
+.usersTable tr{
+
+}
+
+.usersTablePhoto{
+  width: 100px;
+  height: auto;
+}
+
+.rowUsersTable{
+}
+.labelPink{
+  padding-bottom: 20px;
+  border-bottom: 3px solid #fad1a9;
+  padding-left: 20px;
+}
+.tabPink{
+  margin-top: 20px;
+  border-bottom: 3px solid #fad1a9;
+  border-right: 3px solid #fad1a9;
+  color: #fad1a9;
+  font-size: 36px;
+}
+
+.membersTab{
+  background-color: #f7cbc8;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+}
 
 
+.membersTabValue{
+  margin-top: 20px;
+  border-bottom: 3px solid #fad1a9;
+  border-right: 3px solid #fad1a9;
+  color: #fad1a9;
+  font-size: 36px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 
+}
+
+
+.fullNameContainer {
+  padding-bottom: 20px;
+  padding-right: 50px;
+  border-bottom: 3px solid #f7cbc8;
+
+}
+.memberDescriptionFullName{
+  color: #f7cbc8;
+  padding-left: 20px;
+  font-size: 36px!important;
+}
+
+.memberDescriptionLabel{
+  font-size: 20px;
+  color: black;
+  padding-bottom: 20px;
+  padding-right: 60px;
+  border-bottom: 3px solid #f7cbc8;
+
+}
+
+.levelSelectorChevron{
+  font-size: 25px;
+  color: #f7cbc8;
+}
+
+.levelSelectorLabel{
+  font-size: 20px;
+  color: black;
+  padding-bottom: 20px;
+  padding-right: 60px;
+  padding-left: 60px;
+
+  border-bottom: 3px solid #f7cbc8;
+
+}
+
+.btn-approve{
+  color: #555555;
+  background-color: #f7cbc8;
+  font-size:26px;
+  width: 250px;
+}
+
+.btn-reject{
+  color: #555555;
+  text-align: 
+  background-color: #ededed;
+  font-size:26px!important;
+  width: 250px;
+
+}
+
+.pendingMembersChevron{
+  padding-bottom: 20px;
+  color: black!important;
+
+}
+
+.pendingMembersList{
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.pendingMemberItem:nth-of-type(odd) {
+
+}
+.pendingMemberItem:nth-of-type(even) {
+    transform: translateX(40px)!important;
+}
+
+.pendingMemberItem{
+  margin-bottom: 20px;
+}
+.pendingMemberPhoto{
+    transform: scale(1.5) translateX(-20px);
+    transform-origin: center center;
+}
+
+.pendingMember{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fed6ba+0,f8ccc6+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fed6ba+0,f8ccc6+100 */
+  background: #fed6ba; /* Old browsers */
+  background: -moz-linear-gradient(left, #fed6ba 0%, #f8ccc6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #fed6ba 0%,#f8ccc6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #fed6ba 0%,#f8ccc6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed6ba', endColorstr='#f8ccc6',GradientType=1 ); /* IE6-9 */
+  border-radius: 40px;
+  color: white;
+  border: 4px solid white;
+  font-size: 20px;
+}
+
+.pendingMembers{
+  font-size: 24px;
+
+}
+.pendingMemberRemove{
+  color: black;
+  position: relative;
+
+}
+
+.usersTableRow{
+  border: 3px solid #fad1a9;
+
+}
 /***************Restaurant panel*****************/
 
 

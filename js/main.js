@@ -70,7 +70,7 @@ function changeSection(){
 	$( "#sectionContent").hide();
 	$( "#sectionWallet").hide();
 	$( "#sectionMembers").hide();
-
+  $("#sectionMemberDescription").hide();
 }
 
 
@@ -90,7 +90,10 @@ $( "#load_wallet" ).click(function() {
 	changeSection();
   	$( "#sectionWallet").show();
 });
-
+$( "#load_members" ).click(function() {
+  changeSection();
+    $( "#sectionMembers").show();
+});
 $( "#load_content" ).click(function() {
 	changeSection();
 	$( ".dailyContent").show();	
@@ -118,6 +121,15 @@ $("#daily_tab").click(function() {
 $.getJSON("./js/data.json",function(json){
 	console.log(json)
 });
+
+$(".pendingMemberItem").click(function() {
+  console.log("Aaa");
+  changeSection();
+  $("#sectionMemberDescription").show();
+
+});
+
+
 
 
 $("#overview_tab").click(function() {

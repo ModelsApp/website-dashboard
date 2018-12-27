@@ -1,4 +1,5 @@
 var ctx = document.getElementById("myChart").getContext('2d');
+var growthChart = document.getElementById("growthChart").getContext('2d');
 
 
 var myChart = new Chart(ctx, {
@@ -40,3 +41,60 @@ var myChart = new Chart(ctx, {
     }
 });
 
+var growthChart = new Chart(growthChart, {
+    type: 'line',
+    data: {
+    labels : ["January","February","March","April","May","June","July",],
+    datasets : [
+        {
+        data : [65,8,90,81,56,55,40,],
+        backgroundColor :'rgba(52,152,219,0)',
+        borderColor : 'rgba(247,203,200,0.5)',
+        pointBackgroundColor:'#ffffff',
+        pointBorderColor : '#aaaaaa',
+            lineTension: 0,           
+
+        label:"2013"},
+]
+    },
+    fill: false,
+            options: {
+                bezierCurve: false,
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                },
+                elements: {
+                    arc: {},
+                    point: {radius:7,},
+                    line: {tension:0,},
+                    rectangle: {},
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+
+});
