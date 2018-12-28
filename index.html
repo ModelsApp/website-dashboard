@@ -18,7 +18,9 @@
 
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="js/Chart.js"></script>
-
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+<s></s>
 </head>
 
 <body>
@@ -67,9 +69,9 @@
             <div class="sticky-top overviewSelector ">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
-                        <div class="col-4"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
-                        <div class="col-4"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
-                        <div class="col-4"><span id="restaurants_tab" class="sectionTab">Restaurants</span></div>
+                        <div class="col-3"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
+                        <div class="col-3"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
+                        <div class="col-3"><span id="restaurants_tab" class="sectionTab">Restaurants</span></div>
 
                     </div>
                 </div>
@@ -78,24 +80,24 @@
                 <div class="container-fluid" id="overviewScroll">
                     <h2>Partners overview</h2>            
                     <div class="row text-center">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="label">Basic</span>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="label">Premium</span>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="label">Growth</span>
                         </div>                
                     </div>
                     <div class="row text-center">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="value" id="partnersBasic"></span>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="value" id="partnersPremium"></span>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="value" id="partnersGrowth"></span>
                         </div>                
                     </div>            
@@ -104,14 +106,23 @@
 
                     <span class="label">Total reviews</span>  
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <span class="value" id="totalReviews"></span>
                         </div>                  
                     </div>
                             
                 </div>
                 <div class="container-fluid">
-                    Map
+                    <div id='map' style='width: 1200px; height: 500px;'></div>
+                    <script>
+                    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RhbmlzbGF1c2FraGFyY2h1ayIsImEiOiJjanEyNGxxamwwMWR1M3hxaGs0MWw1ZTBpIn0.4J8GfNHWbIRbfxgXlrpGmg';
+                    var map = new mapboxgl.Map({
+                        container: 'map', // container id
+                        style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+                        center: [-74.50, 40], // starting position [lng, lat]
+                        zoom: 9 // starting zoom
+                    });
+                    </script>
                
                 </div>
             </div>       
@@ -121,7 +132,7 @@
                 </div>
                 <div class="container-fluid ">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-10">
                              <div class="btn-group  float-right">
                                   <button type="button" class="btn btn-graph-selected btn-graph">d</button>
                                   <button type="button" class="btn  btn-graph">m</button>
@@ -239,36 +250,40 @@
             <div class="page-content-wrapper contentTab">
                 <div class="container-fluid">
                     <div class="row text-center">
-                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
-                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
+                        <div class="col-5"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
+                        <div class="col-5"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
                     </div>
                 </div>
             </div>            
             <div class="page-content-wrapper dailyContent">
                 <div class="container-fluid">
                     <div class="row">
-                        <table class="table contentTable">
-                          <tr class="contentHeader">
-                            <th></th>
-                            <th></th>                      
-                            <th>Insta stories</th>
-                            <th>Insta posts</th>
-                            <th>Tripadvisor reviews</th>
-                            <th>Google places reviews</th>
-                            <th>Facebook reviews</th>
-                            <th>Balance</th>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Bullona</td>
-                            <td>150</td>
-                            <td>1000</td>
-                            <td>500</td>
-                            <td>48</td>
-                            <td>500</td>
-                            <td>500</td>
-                          </tr>
-                        </table>                
+                        <div class="col-10">
+                            <table class="table contentTable">
+                              <tr class="contentHeader">
+                                <th></th>
+                                <th>Insta stories</th>
+                                <th>Insta posts</th>
+                                <th>Tripadvisor reviews</th>
+                                <th>Google places reviews</th>
+                                <th>Facebook reviews</th>
+                                <th>Balance</th>
+                              </tr>
+                              <tr>
+                                <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
+                                <td>150</td>
+                                <td>1000</td>
+                                <td>500</td>
+                                <td>48</td>
+                                <td>500</td>
+                                <td>500</td>
+                              </tr>
+                              <tr>
+                                <td colspan="8" class="restaurantTab text-left">Bullona</td>
+
+                              </tr>
+                            </table>    
+                        </div>            
                     </div>         
                 </div> 
             </div>    
@@ -287,7 +302,7 @@
                              <th>Offer</th>
                            </tr>
                            <tr>
-                             <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                             <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
                              <td>Sunrina Porfirova</td>
                              <td>150</td>
                              <td>1000</td>
@@ -304,28 +319,30 @@
         </div>
         <div id="sectionWallet">
             <div class="page-content-wrapper walletReport">
-                <div class="container-fluid text-center">
-                    <h2 style="color:#ffb8be">Wallet</h2>            
-
+                <div class="container-fluid ">
+                    <div class="row text-center">
+                        <div class="col-10 text-center">
+                            <h2 style="color:#ffb8be" class="walletHeader align-self-center">Wallet</h2>            
+                        </div>
+                    </div>
                 </div>
-                <div class="container-fluid text-left walletContainer">
-
-                    <div class="row">
-                        <div class="col-3">
-                            <span class="labelBlack">Credits given</span>
-                            <br>
-                            <span class="labelGray" id="credits_given"></span>    
-                        </div>  
-                        <div class="col-3">
-                            <span class="labelBlack">Credits back</span>
-                            <br>
-                            <span class="labelGray" id="credits_back"></span>    
-                        </div>
-                        <div class="col-3">
-                            <span class="labelBlack">Maps reviews</span>
-                            <br>
-                            <span class="labelGray" id="maps_reviews"></span>    
-                        </div>
+                <div class="container-fluid  walletContainer">
+                    <div class="row text-left">
+                            <div class="col-3">
+                                <span class="labelBlack">Credits given</span>
+                                <br>
+                                <span class="labelGray" id="credits_given"></span>    
+                            </div>  
+                            <div class="col-3">
+                                <span class="labelBlack">Credits back</span>
+                                <br>
+                                <span class="labelGray" id="credits_back"></span>    
+                            </div>
+                            <div class="col-3">
+                                <span class="labelBlack">Maps reviews</span>
+                                <br>
+                                <span class="labelGray" id="maps_reviews"></span>    
+                            </div>
                     </div>
                     <div class="row">
                         <div class="col-3">
@@ -352,24 +369,24 @@
             <div class="page-content-wrapper walletRanking">
                 <div class="container-fluid">
                     <div class="row">
-                        <table class="table contentTable">
-                          <tr class="contentHeader">
-                            <th></th>
-                            <th></th>                      
-                            <th>Months</th>
-                            <th>Credits</th>
-                            <th>Plan</th>
-                            <th>Price</th>
-                          </tr>
-                          <tr>
-                            <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                            <td>Anastasia Kalaskowa</td>
-                            <td>123</td>
-                            <td>75</td>
-                            <td>55</td>
-                            <td>1200</td>
-                          </tr>
-                        </table>                
+                        <div class="col-10">
+                            <table class="table contentTable">
+                              <tr class="contentHeader">
+                                <th></th>                      
+                                <th>Months</th>
+                                <th>Credits</th>
+                                <th>Plan</th>
+                                <th>Price</th>
+                              </tr>
+                              <tr>
+                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                <td>123</td>
+                                <td>75</td>
+                                <td>55</td>
+                                <td>1200</td>
+                              </tr>
+                            </table>    
+                        </div>            
                     </div>         
                 </div> 
             </div> 
@@ -454,15 +471,12 @@
                                 </li>
                             </ul>
                             <div class="row text-center">
-                                <div class="col-12">
+                                <div class="col-10">
                                  <i class="fas fa-chevron-down pendingMembersChevron align-self-center"></i>
                                 </div>
                             </div>
 
                         </div>  
-                        <div class="col-2">
-                        </div>
-
                         <div class="col-6">
                             <div class="row ">
                                 <div class="col-6" style="padding-right: 40px;">
@@ -484,7 +498,7 @@
                                 </div>  
                             </div>
                             <div class="row" style="padding-top: 40px;">
-                                <div class="col-12">
+                                <div class="col-10">
                                      <div class="btn-group  float-right">
                                           <button type="button" class="btn btn-graph-selected btn-graph">d</button>
                                           <button type="button" class="btn  btn-graph">m</button>
@@ -498,7 +512,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-10">
 
                             <table class="table usersTable"  cellspacing="0">
                               <tr class="headerUserstable">
@@ -572,10 +586,19 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row"  style="padding-top: 40px">
-                        <div class="col-12 text-center">         
-                            <span id="memberDescriptionBirthdate" class="levelSelectorLabel">Select level</span>
-                            <i class="fas fa-chevron-up levelSelectorChevron"></i>
-
+                        <div class="col-10 text-center">         
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle btn-dropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                      Select Level
+                                    </button>
+                                    <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                      <a class="dropdown-item" href="#">Babymodel</a>
+                                      <a class="dropdown-item" href="#">Good model magnet</a>
+                                      <a class="dropdown-item" href="#">Supermodel</a>
+                                      <a class="dropdown-item" href="#">Babyplus</a>
+                                      <a class="dropdown-item" href="#">Review elite</a>
+                                    </div>
+                                  </div>
                         </div>  
                     </div>         
                 </div> 
