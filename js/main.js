@@ -76,6 +76,13 @@ function changeSection(){
 
 changeSection();
 loadData(json);
+
+$(".approvePanel").hide()
+
+$( ".showPanel" ).click(function() {
+    $(".approvePanel").show()
+});
+
 $( "#sectionOverview").show();
 
 $( "#load_profile" ).click(function() {
