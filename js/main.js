@@ -116,6 +116,9 @@ $( "#load_content" ).click(function() {
   	$( "#sectionContent").show();
 });
 
+$(".approvePanelRemove").click(function() {
+  $(this).parent().parent().parent().remove();
+});
 
 var linkSelected;
 $(".fa-cloud-upload-alt").click(function(){
@@ -127,8 +130,6 @@ $(".fa-cloud-upload-alt").click(function(){
 $("#uploadButton").click(function(){
   linkSelected.removeClass("fa-cloud-upload-alt");
   linkSelected.addClass("fa-link");
-
-
 });
 
 

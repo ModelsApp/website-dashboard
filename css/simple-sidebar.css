@@ -141,6 +141,12 @@ body {
   border-bottom: 3px solid white;
 
 }
+
+.approvePanel:last-child{
+  background-color: #f0f0f0;
+  border-bottom: 0px transparent!important;
+
+}
 /*******Common elements*******/
 
 h3{
@@ -384,6 +390,9 @@ h2{
 
 }
 
+.contentTab{
+  background-color: white;
+}
 .usersTablePhoto, .contentTablePhoto{
   width: 100px;
   height: auto;
@@ -540,7 +549,7 @@ h2{
   border-radius: 40px;
   color: white;
   border: 4px solid white;
-  width: 260px;
+  width: 300px;
   font-size: 20px;
   height: 50px;
 }
@@ -596,6 +605,9 @@ h2{
 
 }
 
+.dailyContent, .fullrecordContent{
+  background-color: #f7f6fb
+}
 
 .dateSelected{
   font-size: 2rem;
@@ -607,9 +619,24 @@ h2{
    background-color: white;
 }
 
-.contentResTable td, .contentResTable td{
+.modelsRanking tr, .restaurantsRanking tr{
    background-color: white;
-  border-bottom: 16px solid #f7f6fb;
+}
+
+.reviewContainer{
+  padding-top: 30px;
+}
+
+.approvePanelRemove{
+  padding-top: 40px;
+}
+
+.linkIcon{
+  padding-top: 30px;
+}
+.contentTableBox{
+   background-color: white;
+   /* border-bottom: 16px solid #f7f6fb; */
    padding: 20px;
 }
 .table th, .table td {

@@ -18,9 +18,9 @@
 
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="js/Chart.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
-<s></s>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <s></s>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 <li>
                     <button type="button" class="btn btn-success">Add restaurant</button>
                 </li>
-            
+
                 <li class="sidebar-brand profilePhoto">
                     <a href="#">
                         <img class="img-profile " src="./img/placeholder.jpg">
@@ -69,79 +69,83 @@
             <div class="sticky-top overviewSelector ">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
-                        <div class="col-3"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
-                        <div class="col-3"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
-                        <div class="col-3"><span id="restaurants_tab" class="sectionTab">Restaurants</span></div>
+                        <div class="col-4"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
+                        <div class="col-4"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
+                        <div class="col-4"><span id="restaurants_tab" class="sectionTab">Restaurants</span></div>
 
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="page-content-wrapper partnersOverview">
                 <div class="container-fluid" id="overviewScroll">
-                    <h2>Partners overview</h2>            
+                    <h2>Partners overview</h2>
                     <div class="row text-center">
-                        <div class="col-3">
+                        <div class="col-4">
                             <span class="label">Basic</span>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <span class="label">Premium</span>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <span class="label">Growth</span>
-                        </div>                
+                        </div>
                     </div>
-                    <div class="row text-center">
-                        <div class="col-3">
+                    <div class="row text-center" style="padding-top: 20px">
+                        <div class="col-4">
                             <span class="value" id="partnersBasic"></span>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <span class="value" id="partnersPremium"></span>
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <span class="value" id="partnersGrowth"></span>
-                        </div>                
-                    </div>            
+                        </div>
+                    </div>
                 </div>
                 <div class="container-fluid">
-
-                    <span class="label">Total reviews</span>  
                     <div class="row">
-                        <div class="col-3">
+                         <div class="col-3 text-center">
+                             <span class="label">Total Reviews</span>
+                             <br>
                             <span class="value" id="totalReviews"></span>
-                        </div>                  
+                        </div>                        
+
                     </div>
-                            
+                    <div class="row">
+
+                    </div>
+
                 </div>
                 <div class="container-fluid">
                     <div id='map' style='width: 1200px; height: 500px;'></div>
                     <script>
-                    mapboxgl.accessToken = 'pk.eyJ1Ijoic3RhbmlzbGF1c2FraGFyY2h1ayIsImEiOiJjanEyNGxxamwwMWR1M3hxaGs0MWw1ZTBpIn0.4J8GfNHWbIRbfxgXlrpGmg';
-                    var map = new mapboxgl.Map({
-                        container: 'map', // container id
-                        style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-                        center: [-74.50, 40], // starting position [lng, lat]
-                        zoom: 9 // starting zoom
-                    });
+                        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RhbmlzbGF1c2FraGFyY2h1ayIsImEiOiJjanEyNGxxamwwMWR1M3hxaGs0MWw1ZTBpIn0.4J8GfNHWbIRbfxgXlrpGmg';
+                        var map = new mapboxgl.Map({
+                            container: 'map', // container id
+                            style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+                            center: [-74.50, 40], // starting position [lng, lat]
+                            zoom: 9 // starting zoom
+                        });
                     </script>
-               
+
                 </div>
-            </div>       
-            <div class="page-content-wrapper reviewsOverview ">            
+            </div>
+            <div class="page-content-wrapper reviewsOverview ">
                 <div class="container-fluid ">
-                    <h2>Reviews overview</h2>    
+                    <h2>Reviews overview</h2>
                 </div>
                 <div class="container-fluid ">
                     <div class="row">
-                        <div class="col-10">
-                             <div class="btn-group  float-right">
-                                  <button type="button" class="btn btn-graph-selected btn-graph">d</button>
-                                  <button type="button" class="btn  btn-graph">m</button>
-                               <button type="button" class="btn  btn-graph">y</button>
-                             </div> 
+                        <div class="col-12">
+                            <div class="btn-group  float-right">
+                                <button type="button" class="btn btn-graph-selected btn-graph">d</button>
+                                <button type="button" class="btn  btn-graph">m</button>
+                                <button type="button" class="btn  btn-graph">y</button>
+                            </div>
                             <canvas id="myChart"></canvas>
                         </div>
                     </div>
-                </div>     
+                </div>
                 <div class="container-fluid ">
                     <div class="row ">
                         <div class="col-6">
@@ -163,99 +167,106 @@
                                     <span class="value" id="googleplacesTotalReviews">30</span>
                                 </div>
                             </div>
-                        </div>        
-                    </div>         
-                </div>
-            </div>
-            <div class="page-content-wrapper rankingOverview" >    
-                <div class="container-fluid " id="rankingScroll">
-                    <div class="row">
-                        <div class="col-10">
-
-                            <h2>Models ranking</h2>   
-                                <div class="btn-group  float-right">
-                                  <button type="button" class="btn btn-graph-selected btn-graph">d</button>
-                                  <button type="button" class="btn  btn-graph">m</button>
-                                  <button type="button" class="btn  btn-graph">y</button>
-                                </div> 
-                            </div>
-                 </div>
-                </div>                            
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-10">
-                            <table class="table modelsRanking">
-                              <tr class="headerModelsRanking">
-                                <th></th>
-                                <th></th>                      
-                                <th>Reviews</th>
-                                <th>Stories</th>
-                                <th>Earned</th>
-                                <th>Spent</th>
-                              </tr>
-                              <tr>
-                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                                <td>Sunrina Porfirova</td>
-                                <td>150</td>
-                                <td>1000</td>
-                                <td>500</td>
-                                <td>48</td>
-                              </tr>
-                              <tr>
-                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                                <td>Sunrina Porfirova</td>
-                                <td>150</td>
-                                <td>1000</td>
-                                <td>500</td>
-                                <td>48</td>
-                              </tr>
-                        </table>   
-                        </div>
-            
-                    </div>         
-                </div>  
-                <div class="container-fluid " id="rankingRestaurants">
-                    <h2>Restaurants ranking</h2>   
-                    <div class="row">
-                        <div class="col-10">
-                            <div class="btn-group  float-right">
-                              <button type="button" class="btn btn-graph btn-graph-selected">d</button>
-                              <button type="button" class="btn btn-graph ">m</button>
-                              <button type="button" class="btn btn-graph ">y</button>
-                            </div> 
                         </div>
                     </div>
-                </div>                   
+
+
+                    <div class="row text-center tabSelector" style="padding-top: 30px">
+                        <div class="col-6"><span id="tripadvisor_tab" class=" sectionTab sectionTabSelected">Tripadvisor<span></span></span></div>
+                        <div class="col-6"><span id="googleplaces_tab" class="sectionTab">Google places</span></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="page-content-wrapper rankingOverview">
+                <div class="container-fluid " id="rankingScroll">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <h2>Models ranking</h2>
+                            <div class="btn-group  float-right">
+                                <button type="button" class="btn btn-graph-selected btn-graph">d</button>
+                                <button type="button" class="btn  btn-graph">m</button>
+                                <button type="button" class="btn  btn-graph">y</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-10">
-                            <table class="table restaurantsRanking">
-                              <tr class="headerRestaurantsRanking">
-                                <th></th>
-                                <th></th>                      
-                                <th>Visitors</th>
-                                <th>Review</th>
-                                <th>Credits</th>
-                              </tr>
-                              <tr>
-                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                                <td>Sunrina Porfirova</td>
-                                <td>123</td>
-                                <td>55</td>
-                                <td>3000</td>
-                              </tr>
-                              <tr>
-                                <td><img class="img-circle" src="./img/placeholder.jpg"></td>
-                                <td>La perla d'oro</td>
-                                <td>150</td>
-                                <td>1000</td>
-                                <td>500</td>
-                              </tr>
-                            </table>     
+                        <div class="col-12">
+                            <table class="table modelsRanking">
+                                <tr class="headerModelsRanking">
+                                    <th></th>
+                                    <th></th>
+                                    <th>Reviews</th>
+                                    <th>Stories</th>
+                                    <th>Earned</th>
+                                    <th>Spent</th>
+                                </tr>
+                                <tr>
+                                    <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                    <td>Sunrina Porfirova</td>
+                                    <td>150</td>
+                                    <td>1000</td>
+                                    <td>500</td>
+                                    <td>48</td>
+                                </tr>
+                                <tr>
+                                    <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                    <td>Sunrina Porfirova</td>
+                                    <td>150</td>
+                                    <td>1000</td>
+                                    <td>500</td>
+                                    <td>48</td>
+                                </tr>
+                            </table>
                         </div>
 
-                    </div>         
-                </div>           
+                    </div>
+                </div>
+                <div class="container-fluid " id="rankingRestaurants">
+                    <h2>Restaurants ranking</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="btn-group  float-right">
+                                <button type="button" class="btn btn-graph btn-graph-selected">d</button>
+                                <button type="button" class="btn btn-graph ">m</button>
+                                <button type="button" class="btn btn-graph ">y</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="table restaurantsRanking">
+                                <tr class="headerRestaurantsRanking">
+                                    <th></th>
+                                    <th></th>
+                                    <th>Visitors</th>
+                                    <th>Review</th>
+                                    <th>Credits</th>
+                                </tr>
+                                <tr>
+                                    <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                    <td>Sunrina Porfirova</td>
+                                    <td>123</td>
+                                    <td>55</td>
+                                    <td>3000</td>
+                                </tr>
+                                <tr>
+                                    <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                    <td>La perla d'oro</td>
+                                    <td>150</td>
+                                    <td>1000</td>
+                                    <td>500</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -265,286 +276,337 @@
             <div class="page-content-wrapper contentTab">
                 <div class="container-fluid">
                     <div class="row text-center">
-                        <div class="col-5"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
-                        <div class="col-5"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
+                        <div class="col-6"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Daily<span></div>
+                        <div class="col-6"><span id="fullrecord_tab" class="sectionTab">Full record</span></div>
                     </div>
                 </div>
-            </div>            
+            </div>
             <div class="page-content-wrapper dailyContent">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-12">
                             <table class="table contentTable">
-                              <tr class="contentHeader">
-                                <th></th>
-                                <th>Insta stories</th>
-                                <th>Insta posts</th>
-                                <th>Tripadvisor reviews</th>
-                                <th>Google places reviews</th>
-                                <th>Facebook reviews</th>
-                                <th>Balance</th>
-                              </tr>
-                              <tr class="">
-                                <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
-                                <td>150</td>
-                                <td>1000</td>
-                                <td>500</td>
-                                <td>48</td>
-                                <td>500</td>
-                                <td>500</td>
-                              </tr>
+                                <tr class="contentHeader">
+                                    <th></th>
+                                    <th style="width: 16.66%">Insta stories</th>
+                                    <th style="width: 16.66%">Insta posts</th>
+                                    <th style="width: 16.66%">Tripadvisor reviews</th>
+                                    <th style="width: 16.66%">Google places reviews</th>
+                                    <th style="width: 16.66%">Facebook reviews</th>
+                                    <th style="width: 16.66%">Balance</th>
+                                </tr>
+                                <tr class="contentTableBox">
+                                    <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
+                                    <td>150</td>
+                                    <td>1000</td>
+                                    <td>500</td>
+                                    <td>48</td>
+                                    <td>500</td>
+                                    <td>500</td>
+                                </tr>
 
-                            <tr class="approvePanel">
-                              <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
-                              </td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>
-                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div>
-                             </td>
-
-
-                              <td><i class="fas fas-black fa-link"></i>
-                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div>
-
-                              </td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                            </tr>
-                            <tr class="approvePanel">
-                              <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
-                              </td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>
-                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div>
-                             </td>
+                                <tr class="approvePanel">
+                                    <td>
+                                        <img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
+                                        <br>
+                                        <div class="col-2 align-self-center" style="">
+                                              <i class="fas fas-grey fa-times approvePanelRemove"></i>                                   
+                                        </div>                                        
+                                    </td>
+                                    <td>
+                                        <i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
 
 
-                              <td><i class="fas fas-black fa-link"></i>
-                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div>
+                                    <td><i class="fas fas-black fa-link linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
 
-                              </td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                              <td><i class="fas fas-black fa-cloud-upload-alt"></i>                                <div class="container">
-                                    <div class="row">
-                                        <button type="button" class="btn btn-danger approveButton">Reject</button>
-                                    </div>
-                                    <div class="row">            
-                                         <button type="button" class="btn btn-success approveButton">Approve</button>
-                                     </div>
-                                </div></td>
-                            </tr>
-                            <tr>
-                              <td colspan="6" class="restaurantTab text-left">Bullona</td>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="approvePanel">
+                                    <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
+                                                                         <br>
+                                        <div class="col-2 align-self-center" style="">
+                                              <i class="fas fas-grey fa-times approvePanelRemove"></i>                                   
+                                        </div>    
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
 
-                              <td colspan="1" class="restaurantTab text-left">
-                              <div class="container">
-                                  <div class="row">
-                                      <button type="button" id="archiveButton"class="btn fullarchiveButton showPanel">Full archive</button>
-                                  </div>
 
-                                </div></td>
-                            </tr>
+                                    <td><i class="fas fas-black fa-link linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer" >
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
+                                        <div class="container reviewContainer">
+                                            <div class="row">
+                                                <button type="button" class="btn btn-danger approveButton">Reject</button>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" class="btn btn-success approveButton">Approve</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="restaurantTab text-left">Bullona</td>
+
+                                    <td colspan="1" class="restaurantTab text-left">
+                                        <div class="container">
+                                            <div class="row">
+                                                <button type="button" id="archiveButton" class="btn fullarchiveButton showPanel">Full archive</button>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
                         </div>
-                            </table>    
-                        </div>            
-                    </div>         
-                </div> 
-            </div>    
-            <div class="page-content-wrapper fullrecordContent">
-                 <div class="container-fluid">
-                     <div class="row">
-                         <table class="table contentTable">
-                           <tr class="contentHeader">
-                             <th></th>
-                             <th></th>                      
-                             <th>Date</th>
-                             <th>Place</th>
-                             <th>Kind</th>
-                             <th>Name</th>
-                             <th>Reward</th>
-                             <th>Offer</th>
-                           </tr>
-                           <tr>
-                             <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
-                             <td>Sunrina Porfirova</td>
-                             <td>150</td>
-                             <td>1000</td>
-                             <td>500</td>
-                             <td>48</td>
-                             <td>500</td>
-                             <td>500</td>
-                           </tr>
-                         </table>                
-                     </div>         
-                 </div> 
-            </div>   
-
-        </div>
-        <div id="sectionWallet">
-            <div class="page-content-wrapper walletReport">
-                <div class="container-fluid ">
-                    <div class="row text-center">
-                        <div class="col-10 text-center">
-                            <h2 style="color:#ffb8be" class="walletHeader align-self-center">Wallet</h2>            
-                        </div>
+                        </table>
                     </div>
-                </div>
-                <div class="container-fluid  walletContainer">
-                    <div class="row text-left">
-                            <div class="col-3">
-                                <span class="labelBlack">Credits given</span>
-                                <br>
-                                <span class="labelGray" id="credits_given"></span>    
-                            </div>  
-                            <div class="col-3">
-                                <span class="labelBlack">Credits back</span>
-                                <br>
-                                <span class="labelGray" id="credits_back"></span>    
-                            </div>
-                            <div class="col-3">
-                                <span class="labelBlack">Maps reviews</span>
-                                <br>
-                                <span class="labelGray" id="maps_reviews"></span>    
-                            </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <span class="labelBlack">Insta Stories</span>
-                            <br>
-                            <span class="labelGray" id="insta_stories"></span>    
-                        </div>  
-                        <div class="col-3">
-                            <span class="labelBlack">Trip reviews</span>
-                            <br>
-                            <span class="labelGray" id="trip_reviews"></span>    
-                        </div>
-                    </div>   
-                    <div class="row">
-                        <div class="col-3">
-                            <span class="labelBlack">Insta Posts</span>
-                            <br>
-                            <span class="labelGray" id="insta_posts"></span>    
-                        </div>  
-
-                    </div>                  
                 </div>
             </div>
-            <div class="page-content-wrapper walletRanking">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-10">
-                            <table class="table contentTable">
-                              <tr class="contentHeader">
-                                <th></th>                      
+        </div>
+        <div class="page-content-wrapper fullrecordContent">
+            <div class="container-fluid">
+                <div class="row">
+                    <table class="table contentTable">
+                        <tr class="contentHeader">
+                            <th></th>
+                            <th style="width: 20.66%" ></th>
+                            <th style="width: 16.66%">Date</th>
+                            <th style="width: 16.66%">Place</th>
+                            <th style="width: 16.66%">Kind</th>
+                            <th style="width: 16.66%">Name</th>
+                            <th style="width: 16.66%">Reward</th>
+                            <th style="width: 16.66%">Offer</th>
+                        </tr>
+                                <tr class="contentTableBox">
+                            <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
+                            <td>Sunrina Porfirova</td>
+                            <td>150</td>
+                            <td>1000</td>
+                            <td>500</td>
+                            <td>48</td>
+                            <td>500</td>
+                            <td>500</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="sectionWallet">
+        <div class="page-content-wrapper walletReport">
+            <div class="container-fluid ">
+                <div class="row text-center">
+                    <div class="col-10 text-center">
+                        <h2 style="color:#ffb8be" class="walletHeader align-self-center">Wallet</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid  walletContainer">
+                <div class="row text-left">
+                    <div class="col-3">
+                        <span class="labelBlack">Credits given</span>
+                        <br>
+                        <span class="labelGray" id="credits_given"></span>
+                    </div>
+                    <div class="col-3">
+                        <span class="labelBlack">Credits back</span>
+                        <br>
+                        <span class="labelGray" id="credits_back"></span>
+                    </div>
+                    <div class="col-3">
+                        <span class="labelBlack">Maps reviews</span>
+                        <br>
+                        <span class="labelGray" id="maps_reviews"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="labelBlack">Insta Stories</span>
+                        <br>
+                        <span class="labelGray" id="insta_stories"></span>
+                    </div>
+                    <div class="col-3">
+                        <span class="labelBlack">Trip reviews</span>
+                        <br>
+                        <span class="labelGray" id="trip_reviews"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="labelBlack">Insta Posts</span>
+                        <br>
+                        <span class="labelGray" id="insta_posts"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-content-wrapper walletRanking">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-10">
+                        <table class="table contentTable">
+                            <tr class="contentHeader">
+                                <th></th>
                                 <th>Months</th>
                                 <th>Credits</th>
                                 <th>Plan</th>
                                 <th>Price</th>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <td><img class="img-circle" src="./img/placeholder.jpg"></td>
                                 <td>123</td>
                                 <td>75</td>
                                 <td>55</td>
                                 <td>1200</td>
-                              </tr>
-                            </table>    
-                        </div>            
-                    </div>         
-                </div> 
-            </div> 
-
-
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Section Members -->
 
-        <div id="sectionMembers">
-            <div class="page-content-wrapper members">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-4"  style="padding-top: 84px;">
-                            <div class="row labelPink ">
-                                <span class="pendingMembers">Pending members</span>
-                            </div>
+
+    </div>
+    <!-- Section Members -->
+
+    <div id="sectionMembers">
+        <div class="page-content-wrapper members">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5" style="padding-top: 84px;">
+                        <div class="row labelPink ">
+                            <span class="pendingMembers">Pending members</span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="row membersTab -flex align-items-center flex-column">
+                            <span class="centerSpan">Tot members</span>
+                        </div>
+                        <div class="row membersTabValue -flex align-items-end flex-column">
+                            <span id="totMembers" class="totMembers">140</span>
+                        </div>
+                    </div>
+                  <div class="col-3" style="    margin-left: 10px;">
+                        <div class="row membersTab -flex align-items-center flex-column">
+                            <span class="centerSpan">Invited members</span>
+
+                        </div>
+                        <div class="row membersTabValue -flex align-items-end flex-column">
+                            <span id="invitedMembers" class="invitedMembers ">140</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
                             <ul class="pendingMembersList">
                                 <li class="pendingMemberItem">
                                     <div class="row pendingMember">
@@ -594,7 +656,7 @@
                                             <span class="pendingMemberName">Sunrina A</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-greyfa-times pendingMemberRemove"></i>                                   
+                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
                                         </div>
                                     </div>
                                 </li>
@@ -617,57 +679,38 @@
                                  <i class="fas fa-chevron-down pendingMembersChevron align-self-center"></i>
                                 </div>
                             </div>
-
-                        </div>  
-                        <div class="col-6">
-                            <div class="row ">
-                                <div class="col-6" style="padding-right: 40px;">
-                                    <div class="row membersTab -flex align-items-center flex-column">
-                                        <span class="centerSpan">Tot members</span>
-                                    </div>
-                                    <div class="row membersTabValue -flex align-items-end flex-column">
-                                        <span id="totMembers" class="totMembers">140</span>
-                                    </div>                                  
-                                </div>    
-                                <div class="col-6">
-                                    <div class="row membersTab -flex align-items-center flex-column">
-                                        <span class="centerSpan">Invited members</span>
-
-                                    </div>
-                                    <div class="row membersTabValue -flex align-items-end flex-column">
-                                        <span  id="invitedMembers" class="invitedMembers ">140</span>
-                                    </div>                                  
-                                </div>  
-                            </div>
-                            <div class="row" style="padding-top: 40px;">
-                                <div class="col-10">
-                                     <div class="btn-group  float-right">
+                    </div>
+                    <div class="col-7">
+                                      <div class="btn-group  float-right">
                                           <button type="button" class="btn btn-graph-selected btn-graph">d</button>
                                           <button type="button" class="btn  btn-graph">m</button>
                                        <button type="button" class="btn  btn-graph">y</button>
                                      </div> 
                                     <canvas id="growthChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-10">
+            </div>
 
-                            <table class="table usersTable"  cellspacing="0">
-                              <tr class="headerUserstable">
+
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-10">
+
+                        <table class="table usersTable" cellspacing="0">
+                            <tr class="headerUserstable">
                                 <th></th>
                                 <th>Name</th>
-                                <th>Level</th>                    
+                                <th>Level</th>
                                 <th>Credits</th>
                                 <th>Age</th>
                                 <th>Nationality</th>
                                 <th>Location</th>
                                 <th>Price</th>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <td><img class="img-circle usersTablePhoto" src="./img/placeholder.jpg"></td>
                                 <td class="">Anastasia Kalaskowa</td>
                                 <td>10</td>
@@ -676,115 +719,115 @@
                                 <td>Russian</td>
                                 <td>Milan</td>
                                 <td>300</td>
-                              </tr>
-                            </table>              
-                        </div>  
-                    </div>         
-                </div> 
-            </div> 
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div id="sectionMemberDescription">
-            <div class="page-content-wrapper ">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="./img/placeholder.jpg" class=" float-left">
-                            <div class="fullNameContainer">
+    <div id="sectionMemberDescription">
+        <div class="page-content-wrapper ">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="./img/placeholder.jpg" class=" float-left">
+                        <div class="fullNameContainer">
                             <span class="memberDescriptionFullName ">Sunrina Porfirova</span>
-                            </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-8">         
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-8">
 
-                        </div>  
-                    </div>         
-                </div> 
-            </div> 
-            <div class="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row" style="padding-bottom: 40px">
-                        <div class="col-4">
-                            <span id="memberDescriptionName" class="memberDescriptionLabel">Sunrina</span>
-                        </div>  
-                        <div class="col-4">
-                            <span id="memberDescriptionBirthdate" class="memberDescriptionLabel">14/05/1994</span>
-                        </div>  
-                        <div class="col-4">
-                            <span id="memberDescriptionNationality" class="memberDescriptionLabel">Russian</span>
-                        </div>  
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <span id="memberDescriptionSurname" class="memberDescriptionLabel">Porfirova</span>
-                        </div>  
-                        <div class="col-4">
-                            <span id="memberDescriptionGender" class="memberDescriptionLabel">Female</span>
-                        </div>  
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <div class="row"  style="padding-top: 40px">
-                        <div class="col-10 text-center">         
-                                <div class="btn-group dropup">
-                                    <button type="button" class="btn btn-secondary dropdown-toggle btn-dropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            </div>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row" style="padding-bottom: 40px">
+                    <div class="col-4">
+                        <span id="memberDescriptionName" class="memberDescriptionLabel">Sunrina</span>
+                    </div>
+                    <div class="col-4">
+                        <span id="memberDescriptionBirthdate" class="memberDescriptionLabel">14/05/1994</span>
+                    </div>
+                    <div class="col-4">
+                        <span id="memberDescriptionNationality" class="memberDescriptionLabel">Russian</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <span id="memberDescriptionSurname" class="memberDescriptionLabel">Porfirova</span>
+                    </div>
+                    <div class="col-4">
+                        <span id="memberDescriptionGender" class="memberDescriptionLabel">Female</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row" style="padding-top: 40px">
+                    <div class="col-10 text-center">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-secondary dropdown-toggle btn-dropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                       Select Level
                                     </button>
-                                    <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                      <a class="dropdown-item" href="#">Babymodel</a>
-                                      <a class="dropdown-item" href="#">Good model magnet</a>
-                                      <a class="dropdown-item" href="#">Supermodel</a>
-                                      <a class="dropdown-item" href="#">Babyplus</a>
-                                      <a class="dropdown-item" href="#">Review elite</a>
-                                    </div>
-                                  </div>
-                        </div>  
-                    </div>         
-                </div> 
-                <div class="container-fluid">
-                    <div class="row"  style="padding-top: 40px">
-                        <div class="col-6 text-center">       
-                            <button type="button" class="btn btn-approve">Approve</button>
-  
-                        </div>  
-                        <div class="col-6 text-center">    
-                             <button type="button" class="btn btn-reject">Reject</button>
-     
-                        </div>  
+                            <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                <a class="dropdown-item" href="#">Babymodel</a>
+                                <a class="dropdown-item" href="#">Good model magnet</a>
+                                <a class="dropdown-item" href="#">Supermodel</a>
+                                <a class="dropdown-item" href="#">Babyplus</a>
+                                <a class="dropdown-item" href="#">Review elite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row" style="padding-top: 40px">
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn btn-approve">Approve</button>
 
-                    </div>         
-                </div> 
-            </div> 
+                    </div>
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn btn-reject">Reject</button>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
-<!-- Button trigger modal -->
+    <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="insertLinkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Insert Link Here</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <!-- Modal -->
+    <div class="modal fade" id="insertLinkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Insert Link Here</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body insertLinkModalBody">
-        <input class="form-control input-insertLinkModal" type="text" >
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="uploadButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">Upload</button>
-      </div>
+                </div>
+                <div class="modal-body insertLinkModalBody">
+                    <input class="form-control input-insertLinkModal" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="uploadButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">Upload</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
