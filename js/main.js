@@ -79,8 +79,16 @@ loadData(json);
 
 $(".approvePanel").hide()
 
-$( ".showPanel" ).click(function() {
-    $(".approvePanel").show()
+$(".fullarchiveButton ").click(function() {
+  if($(this).text()==="Full archive"){
+    $(this).text("Close");
+    $(".approvePanel").show();
+  }else{
+    $(".approvePanel").hide();
+    $(this).text("Full archive");
+
+  }
+
 });
 
 $( "#sectionOverview").show();
@@ -108,6 +116,20 @@ $( "#load_content" ).click(function() {
   	$( "#sectionContent").show();
 });
 
+
+var linkSelected;
+$(".fa-cloud-upload-alt").click(function(){
+  $('#insertLinkModal').modal('show')
+  linkSelected = $(this)
+});
+
+
+$("#uploadButton").click(function(){
+  linkSelected.removeClass("fa-cloud-upload-alt");
+  linkSelected.addClass("fa-link");
+
+
+});
 
 
 $("#fullrecord_tab").click(function() {
