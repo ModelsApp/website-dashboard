@@ -23,6 +23,7 @@ var myChart = new Chart(ctx, {
     options: {
         responsive: true,
 
+
         scales: {
             xAxes: [{
                 stacked: true,
@@ -60,7 +61,8 @@ var growthChart = new Chart(growthChart, {
     fill: false,
             options: {
                 bezierCurve: false,
-                responsive: true,
+                responsive: false,
+                maintainAspectRatio:false,
                 title: {
                     display: true,
                     text: 'Chart.js Line Chart'

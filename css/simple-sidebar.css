@@ -6,7 +6,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: Arial;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #wrapper {
@@ -18,16 +18,16 @@ body {
 }
 
 #wrapper.toggled {
-  padding-left: 300px;
+  padding-left: 244px;
 }
 
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 300px;
+  left: 244px;
   width: 0;
   height: 100%;
-  margin-left: -300px;
+  margin-left: -244px;
   overflow-y: auto;
   background: #ededed;
   -webkit-transition: all 0.5s ease;
@@ -37,7 +37,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  width: 300px;
+  width: 244px;
 }
 
 .page-content-wrapper {
@@ -48,7 +48,7 @@ body {
 
 #wrapper.toggled .page-content-wrapper {
   position: absolute;
-  margin-right: -300px;
+  margin-right: -244px;
 }
 
 
@@ -57,7 +57,7 @@ body {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 300px;
+  width: 244px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -116,13 +116,13 @@ body {
     padding-left: 0;
   }
   #wrapper.toggled {
-    padding-left: 300px;
+    padding-left: 244px;
   }
   #sidebar-wrapper {
     width: 0;
   }
   #wrapper.toggled #sidebar-wrapper {
-    width: 300px;
+    width: 244px;
     text-align: center;
   }
   .page-content-wrapper {
@@ -158,7 +158,8 @@ h2{
     color: #87cf7f;
     font-weight: normal;
     padding-bottom: 30px;
-
+    font-size: 32px;
+    font-weight: lighter;
 }
 
 
@@ -175,9 +176,9 @@ h2{
   color:#87cf7f;
 }
 .label{
-    color: #87cf7f;
-    font-size: 1.5rem;
-
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .labelGray{
@@ -195,9 +196,8 @@ h2{
 }
 .value{
     color: #87cf7f;
-    font-size: 1.5rem;
-
-    
+    font-size: 20px;
+    font-weight: 300;
 }
 .container-fluid {
     width: 100%;
@@ -221,8 +221,9 @@ h2{
 
 .sectionTab{
   color:gray;
-  font-size: 32px;
+  font-size: 24px;
   padding: 10px;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -237,9 +238,10 @@ h2{
     border-radius: 60px;
 }
 .img-profile {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 30px:;
 }
 .profilePhoto{
   margin-bottom: 30px;
@@ -268,8 +270,7 @@ h2{
     
 }
 .activitiesOverview{
-   background-color: #f7f6fb;
-
+   /* background-color: #f7f6fb; */
 }
 .offersRes{
    background-color: #f7f6fb;
@@ -502,6 +503,12 @@ h2{
   font-size:26px;
   width: 250px;
 }
+canvas{
+
+  width:650px !important;
+  height:500px !important;
+
+}
 
 .btn-reject{
   color: #555555;
@@ -517,7 +524,11 @@ h2{
   color: black!important;
 
 }
+.pendingMemberName{
+  font-size:20px;
 
+
+}
 .pendingMembersList{
   list-style-type: none;
   padding-top: 20px;
@@ -548,8 +559,8 @@ h2{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed6ba', endColorstr='#f8ccc6',GradientType=1 ); /* IE6-9 */
   border-radius: 40px;
   color: white;
-  border: 4px solid white;
-  width: 300px;
+  /* border: 4px solid white; */
+  max-width: 244px;
   font-size: 20px;
   height: 50px;
 }
@@ -573,13 +584,13 @@ h2{
 
 #restaurant_name{
   color: black!important;
-
+  font-size: 28px;
+  padding-top: 80px;
 }
 
 
 .activitiesOverviewRes, .visitorsOverviewRes, .rankingOverviewRes, .offersOverviewRes {
-  background-color: #f7f6fb;
-  
+  /* background-color: #f7f6fb; */
 }
 
 /**********Offers section************************/
@@ -589,6 +600,10 @@ h2{
 
 }
 
+
+.cardCol{
+  margin-right: 20px;
+}
 #editOffers{
   float:right;
   color: #87cf7f;
@@ -605,6 +620,11 @@ h2{
 
 }
 
+.rank{
+    color: #77c96e;
+    font-size: 20px;
+    font-weight: 300;
+}
 .dailyContent, .fullrecordContent{
   background-color: #f7f6fb
 }
