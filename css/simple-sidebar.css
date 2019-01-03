@@ -18,16 +18,16 @@ body {
 }
 
 #wrapper.toggled {
-  padding-left: 244px;
+  padding-left: 200px;
 }
 
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 244px;
+  left: 200px;
   width: 0;
   height: 100%;
-  margin-left: -244px;
+  margin-left: -200px;
   overflow-y: auto;
   background: #ededed;
   -webkit-transition: all 0.5s ease;
@@ -37,7 +37,7 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  width: 244px;
+  width: 200px;
 }
 
 .page-content-wrapper {
@@ -48,7 +48,7 @@ body {
 
 #wrapper.toggled .page-content-wrapper {
   position: absolute;
-  margin-right: -244px;
+  margin-right: -200px;
 }
 
 
@@ -57,7 +57,7 @@ body {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 244px;
+  width: 200px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -74,7 +74,7 @@ body {
   display: block;
   text-decoration: none;
   color: #000000;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .sidebar-nav li a:hover {
@@ -116,13 +116,13 @@ body {
     padding-left: 0;
   }
   #wrapper.toggled {
-    padding-left: 244px;
+    padding-left: 200px;
   }
   #sidebar-wrapper {
     width: 0;
   }
   #wrapper.toggled #sidebar-wrapper {
-    width: 244px;
+    width: 200px;
     text-align: center;
   }
   .page-content-wrapper {
@@ -168,7 +168,7 @@ h2{
     color: white!important;
 }
 .btn-graph{
-    width: 80px;
+    width: 40px;
     color: #8e8e8e;
     background-color: #ededed;
 }
@@ -183,11 +183,11 @@ h2{
 
 .labelGray{
     color: gray;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 .labelBlack{
     color: black;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 
 .labelPink{
@@ -214,14 +214,14 @@ h2{
 }
 
 .tabSelector{
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   /*border-bottom: 1px solid #dee2e6;*/
 }
 
 
 .sectionTab{
   color:gray;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   font-weight: 300;
   cursor: pointer;
@@ -283,10 +283,16 @@ h2{
 
 .walletContainer{
   padding-left: 20%;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .walletHeader{
   font-size: 32px;
+}
+
+.walletRow{
+      padding-bottom: 20px;
 }
 /******Ranking*********************/
 .rankingOverview{
@@ -344,12 +350,12 @@ h2{
 }
 
 .usersTable {
-  border-collapse: separate;
+  /*border-collapse: separate;*/
 
 }
 .usersTable td{
   background-color: white;
-    border: 5px solid #f7cbc8;
+   /* border: 5px solid #f7cbc8;*/
     border-left: none;
     border-right: none;
   text-align: center;
@@ -360,7 +366,7 @@ h2{
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 
-  border: 5px solid #f7cbc8;
+  /*border: 5px solid #f7cbc8;*/
   border-left: none;
 
 }
@@ -376,7 +382,7 @@ h2{
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 
-  border: 5px solid #f7cbc8;
+  /*border: 5px solid #f7cbc8;*/
   border-right: none;
 
 }
@@ -388,14 +394,15 @@ h2{
 
 }
 .usersTable tr{
-
+    margin-bottom: 20px;
 }
 
 .contentTab{
   background-color: white;
 }
 .usersTablePhoto, .contentTablePhoto{
-  width: 100px;
+  /* width: 90px; */
+  transform: scale(1.2);
   height: auto;
 }
 
@@ -503,12 +510,7 @@ h2{
   font-size:26px;
   width: 250px;
 }
-canvas{
-
-  width:650px !important;
-  height:500px !important;
-
-}
+.growthChart{width:650px !important;height: 400px !important;}
 
 .btn-reject{
   color: #555555;
@@ -525,13 +527,11 @@ canvas{
 
 }
 .pendingMemberName{
-  font-size:20px;
-
-
+  font-size: 15px;
 }
 .pendingMembersList{
   list-style-type: none;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .pendingMemberItem:nth-of-type(odd) {
@@ -545,7 +545,7 @@ canvas{
   margin-bottom: 40px;
 }
 .pendingMemberPhoto{
-    transform: scale(1.5) translateX(-20px);
+    transform: scale(1.2) translateX(-20px);
     transform-origin: center center;
 }
 
@@ -559,9 +559,9 @@ canvas{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed6ba', endColorstr='#f8ccc6',GradientType=1 ); /* IE6-9 */
   border-radius: 40px;
   color: white;
-  /* border: 4px solid white; */
-  max-width: 244px;
-  font-size: 20px;
+  border: 4px solid white;
+  max-width: 250px;
+  font-size: 15px;
   height: 50px;
 }
 
@@ -570,9 +570,8 @@ canvas{
 
 }
 .pendingMemberRemove{
-  color: black;
-  position: relative;
-
+  /* padding-right: 30px; */
+  transform: translateX(-10px);
 }
 
 .usersTableRow{
@@ -626,7 +625,7 @@ canvas{
     font-weight: 300;
 }
 .dailyContent, .fullrecordContent{
-  background-color: #f7f6fb
+  /* background-color: #f7f6fb */
 }
 
 .dateSelected{
@@ -663,9 +662,13 @@ canvas{
     padding: 0.75rem;
     vertical-align: middle;
     color: #555555;
-    font-size: 24px!important;
-    font-weight: 400!important;
+    font-size: 20px!important;
+    /* font-weight: 400!important; */
     text-align: center;
+    font-size: 20px!important;
+    font-weight: 300!important;
+    /* font-size: 20px!important; */
+    /* font-weight: 300; */
 }
 
 .fas-black{

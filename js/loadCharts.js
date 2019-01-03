@@ -28,12 +28,16 @@ var myChart = new Chart(ctx, {
             xAxes: [{
                 stacked: true,
                 barPercentage: 1,
-                categoryPercentage: 0.5
-
+                categoryPercentage: 0.5,
+                    gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            }
             }],            
             yAxes: [{
                 stacked: true,
-
+gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            },
                 ticks: {
                     beginAtZero:true
                 }
@@ -83,18 +87,20 @@ var growthChart = new Chart(growthChart, {
                 },
                 scales: {
                     xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Month'
-                        }
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            }
                     }],
                     yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value'
-                        }
+                                    gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            },
+            ticks: {
+                max: 100,
+                min: 0,
+                stepSize: 20
+            }
+
                     }]
                 }
             }

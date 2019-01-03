@@ -35,7 +35,8 @@
                     <button type="button" class="btn btn-success">Add restaurant</button>
                 </li>
 
-                <li class="sidebar-brand profilePhoto">
+                <li class="sidebar-brand profilePhoto" style="
+    margin-bottom: 80px;>
                     <a href="#">
                         <img class="img-profile " src="./img/placeholder.jpg">
                     </a>
@@ -68,7 +69,7 @@
 
         <div id="sectionOverview">
             <div class="sticky-top overviewSelector ">
-                <div class="container-fluid">
+                <div style="padding:10px">
                     <div class="row text-center tabSelector">
                         <div class="col-4"><span id="overview_tab" class=" sectionTab sectionTabSelected">Overview<span></div>
                         <div class="col-4"><span id="ranking_tab" class="sectionTab">Ranking</span></div>
@@ -105,7 +106,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                         <div class="col-3 text-center">
+                         <div class="col-4 text-center">
                              <span class="label">Total Reviews</span>
                              <br>
                             <span class="value" id="totalReviews"></span>
@@ -195,8 +196,11 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
+
+
+
                         <div class="col-12">
-                            <table class="table modelsRanking">
+                            <table class="table usersTable">
                                 <tr class="headerModelsRanking">
                                     <th></th>
                                     <th></th>
@@ -508,7 +512,7 @@
                 </div>
             </div>
             <div class="container-fluid  walletContainer">
-                <div class="row text-left">
+                <div class="row text-left walletRow">
                     <div class="col-3">
                         <span class="labelBlack">Credits given</span>
                         <br>
@@ -525,7 +529,7 @@
                         <span class="labelGray" id="maps_reviews"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row walletRow">
                     <div class="col-3">
                         <span class="labelBlack">Insta Stories</span>
                         <br>
@@ -537,7 +541,7 @@
                         <span class="labelGray" id="trip_reviews"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row walletRow">
                     <div class="col-3">
                         <span class="labelBlack">Insta Posts</span>
                         <br>
@@ -554,7 +558,7 @@
                         <table class="table contentTable">
                             <tr class="contentHeader">
                                 <th></th>
-                                <th>Months</th>
+                                <th>Month</th>
                                 <th>Credits</th>
                                 <th>Plan</th>
                                 <th>Price</th>
@@ -578,9 +582,9 @@
 
     <div id="sectionMembers">
         <div class="page-content-wrapper members">
-            <div class="container-fluid">
+            <div class="">
                 <div class="row">
-                    <div class="col-5" style="padding-top: 84px;">
+                    <div class="col-3" style="padding-top: 84px;margin-right: 60px;">
                         <div class="row labelPink ">
                             <span class="pendingMembers">Pending members</span>
                         </div>
@@ -593,7 +597,7 @@
                             <span id="totMembers" class="totMembers">140</span>
                         </div>
                     </div>
-                  <div class="col-3" style="    margin-left: 10px;">
+                  <div class="col-3" style="    margin-left: 30px;">
                         <div class="row membersTab -flex align-items-center flex-column">
                             <span class="centerSpan">Invited members</span>
 
@@ -605,7 +609,7 @@
 
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="">
                 <div class="row">
                     <div class="col-4">
                             <ul class="pendingMembersList">
@@ -618,7 +622,7 @@
                                             <span class="pendingMemberName">Alexandra P</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
+                                              <img class="pendingMemberRemove" src="./img/multiply.png">                          
                                         </div>
                                     </div>
                                 </li>
@@ -631,7 +635,7 @@
                                             <span class="pendingMemberName">Olga R</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
+                                              <img class="pendingMemberRemove" src="./img/multiply.png">                          
                                         </div>
                                     </div>
                                 </li>
@@ -644,7 +648,7 @@
                                             <span class="pendingMemberName">Sunrina A</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
+                                              <img class="pendingMemberRemove" src="./img/multiply.png">                          
                                         </div>
                                     </div>
                                 </li>
@@ -657,7 +661,7 @@
                                             <span class="pendingMemberName">Sunrina A</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
+                                              <img class="pendingMemberRemove" src="./img/multiply.png">                          
                                         </div>
                                     </div>
                                 </li>
@@ -670,7 +674,7 @@
                                             <span class="pendingMemberName">Sunrina A</span>
                                         </div>
                                         <div class="col-2 align-self-center">
-                                              <i class="fas fas-grey fa-times pendingMemberRemove"></i>                                   
+                                              <img class="pendingMemberRemove" src="./img/multiply.png">                          
                                         </div>
                                     </div>
                                 </li>
@@ -681,13 +685,13 @@
                                 </div>
                             </div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-6" style="margin-top: 40px;">
                                       <div class="btn-group  float-right">
                                           <button type="button" class="btn btn-graph-selected btn-graph">d</button>
                                           <button type="button" class="btn  btn-graph">m</button>
                                        <button type="button" class="btn  btn-graph">y</button>
                                      </div> 
-                                    <canvas id="growthChart"></canvas>
+                                    <canvas class="growthChart" id="growthChart"></canvas>
 
                     </div>
                 </div>
@@ -698,7 +702,7 @@
 
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-12">
 
                         <table class="table usersTable" cellspacing="0">
                             <tr class="headerUserstable">
@@ -713,7 +717,7 @@
                             </tr>
                             <tr>
                                 <td><img class="img-circle usersTablePhoto" src="./img/placeholder.jpg"></td>
-                                <td class="">Anastasia Kalaskowa</td>
+                                <td class="">Anastasia K.</td>
                                 <td>10</td>
                                 <td>1200</td>
                                 <td>24</td>
@@ -829,6 +833,10 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal -->
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
