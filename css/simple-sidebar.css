@@ -147,6 +147,10 @@ body {
   border-bottom: 0px transparent!important;
 
 }
+
+.fixedTable{
+  table-layout: fixed;
+}
 /*******Common elements*******/
 
 h3{
@@ -637,16 +641,19 @@ h2{
 
 .dailyVisitors{
   border: none;
+  text-align: center;
   border-color: transparent;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   /* vertical-align: middle; */
   text-align: center;
   color: #555555;
   font-size: 20px!important;
   font-weight: 300!important;
+  text-align: center;
   /* text-align: center; */
   font-size: 20px!important;
-  width: 60px;
+  text-align: center;
+  width: 30px;
 }
 
 
@@ -717,7 +724,7 @@ h2{
    /* border-bottom: 16px solid #f7f6fb; */
    padding: 20px;
 }
-.table th, .table td {
+.table th {
     padding: 0.75rem;
     vertical-align: middle;
     color: #555555;
@@ -725,6 +732,20 @@ h2{
     /* font-weight: 400!important; */
     text-align: center;
     font-size: 20px!important;
+    font-weight: 300!important;
+    /* font-size: 20px!important; */
+    /* font-weight: 300; */
+}
+
+
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    color: #555555;
+    font-size: 20px!important;
+    /* font-weight: 400!important; */
+    text-align: center;
+    font-size: 15px!important;
     font-weight: 300!important;
     /* font-size: 20px!important; */
     /* font-weight: 300; */
