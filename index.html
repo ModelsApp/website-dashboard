@@ -16,7 +16,6 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <script src="js/Chart.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
@@ -35,8 +34,7 @@
                     <button type="button" class="btn btn-success">Add restaurant</button>
                 </li>
 
-                <li class="sidebar-brand profilePhoto" style="
-    margin-bottom: 80px;>
+                <li class="sidebar-brand profilePhoto" style="margin-bottom: 80px;">
                     <a href="#">
                         <img class="img-profile " src="./img/placeholder.jpg">
                     </a>
@@ -196,11 +194,8 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-
-
-
                         <div class="col-12">
-                            <table class="table usersTable">
+                            <table class="table contentTable blueBorder">
                                 <tr class="headerModelsRanking">
                                     <th></th>
                                     <th></th>
@@ -245,7 +240,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <table class="table restaurantsRanking">
+                            <table class="table contentTable blueBorder">
                                 <tr class="headerRestaurantsRanking">
                                     <th></th>
                                     <th></th>
@@ -289,8 +284,8 @@
             <div class="page-content-wrapper dailyContent">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
-                            <table class="table contentTable">
+                        <div class="col-10">
+                            <table class="table usersTable whiteBorder">
                                 <tr class="contentHeader">
                                     <th></th>
                                     <th style="width: 16.66%">Insta stories</th>
@@ -314,8 +309,8 @@
                                     <td>
                                         <img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
                                         <br>
-                                        <div class="col-2 align-self-center" style="">
-                                              <i class="fas fas-grey fa-times approvePanelRemove"></i>                                   
+                                        <div class="col-2 align-self-center deleteUser" style="">
+<img class="pendingMemberRemove" src="./img/multiply.png">                                   
                                         </div>                                        
                                     </td>
                                     <td>
@@ -386,9 +381,8 @@
                                 <tr class="approvePanel">
                                     <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
                                                                          <br>
-                                        <div class="col-2 align-self-center" style="">
-                                              <i class="fas fas-grey fa-times approvePanelRemove"></i>                                   
-                                        </div>    
+                                        <div class="col-2 align-self-center deleteUser" style="">
+<img class="pendingMemberRemove " src="./img/multiply.png">                                        </div>    
                                     </td>
                                     <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
                                         <div class="container reviewContainer">
@@ -475,7 +469,7 @@
         <div class="page-content-wrapper fullrecordContent">
             <div class="container-fluid">
                 <div class="row">
-                    <table class="table contentTable">
+                    <table class="table contentTable whiteBorder">
                         <tr class="contentHeader">
                             <th></th>
                             <th style="width: 20.66%" ></th>
@@ -488,7 +482,7 @@
                         </tr>
                                 <tr class="contentTableBox">
                             <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
-                            <td>Sunrina Porfirova</td>
+                            <td>Sunrina P</td>
                             <td>150</td>
                             <td>1000</td>
                             <td>500</td>
@@ -506,7 +500,7 @@
         <div class="page-content-wrapper walletReport">
             <div class="container-fluid ">
                 <div class="row text-center">
-                    <div class="col-10 text-center">
+                    <div class="col-12   text-center">
                         <h2 style="color:#ffb8be" class="walletHeader align-self-center">Wallet</h2>
                     </div>
                 </div>
@@ -704,8 +698,8 @@
                 <div class="row">
                     <div class="col-12">
 
-                        <table class="table usersTable" cellspacing="0">
-                            <tr class="headerUserstable">
+                        <table class="table approvePanel blueBorder" cellspacing="0">
+                            <tr class="headercontentTable">
                                 <th></th>
                                 <th>Name</th>
                                 <th>Level</th>
@@ -716,7 +710,7 @@
                                 <th>Price</th>
                             </tr>
                             <tr>
-                                <td><img class="img-circle usersTablePhoto" src="./img/placeholder.jpg"></td>
+                                <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg"></td>
                                 <td class="">Anastasia K.</td>
                                 <td>10</td>
                                 <td>1200</td>

@@ -232,6 +232,20 @@ h2{
 
 }
 
+
+.serviceTab{
+  color:gray;
+  font-size: 24px;
+  padding: 10px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.serviceTabSelected{
+  color: #87cf7f;
+
+}
+
 .img-circle {
     width: 60px;
     height: 60px;
@@ -308,7 +322,7 @@ h2{
 
 .modelsRanking td, .restaurantsRanking td{
    background-color: white;
-  border-bottom: 16px solid #f7f6fb;
+   border-bottom: 16px solid #f7f6fb;
    padding: 20px;
 }
 
@@ -373,11 +387,11 @@ h2{
 
 }
 
-.usersTable {
+.contentTable {
   /*border-collapse: separate;*/
 
 }
-.usersTable td{
+.contentTable td{
   background-color: white;
    /* border: 5px solid #f7cbc8;*/
     border-left: none;
@@ -385,7 +399,7 @@ h2{
   text-align: center;
 
 }
-.usersTable td:last-child{
+.contentTable td:last-child{
   background-color: white;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
@@ -394,14 +408,14 @@ h2{
   border-left: none;
 
 }
-.usersTable td:first-child{
+.contentTable td:first-child{
   background-color: transparent;
 
   border: none;
 
 }
 
-.usersTable td:nth-child(2){
+.contentTable td:nth-child(2){
   background-color: white;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
@@ -410,27 +424,27 @@ h2{
   border-right: none;
 
 }
-.usersTable th{
+.contentTable th{
   color: #8d8d8d;
   font-size: 24px!important;
   font-weight: 400!important;
   text-align: center;
 
 }
-.usersTable tr{
+.contentTable tr{
     margin-bottom: 20px;
 }
 
 .contentTab{
   background-color: white;
 }
-.usersTablePhoto, .contentTablePhoto{
+.contentTablePhoto, .contentTablePhoto{
   /* width: 90px; */
   transform: scale(1.2);
   height: auto;
 }
 
-.rowUsersTable{
+.rowcontentTable{
 }
 .labelPink{
   padding-bottom: 20px;
@@ -589,6 +603,10 @@ h2{
   height: 50px;
 }
 
+
+.deleteUser{
+  padding-top: 30px;
+}
 .pendingMembers{
   font-size: 24px;
 
@@ -598,7 +616,7 @@ h2{
   transform: translateX(-10px);
 }
 
-.usersTableRow{
+.contentTableRow{
   border: 3px solid #fad1a9;
 
 }
@@ -612,8 +630,8 @@ h2{
 }
 
 
-.activitiesOverviewRes, .visitorsOverviewRes, .rankingOverviewRes, .offersOverviewRes {
-  /* background-color: #f7f6fb; */
+.rankingOverviewRes {
+   background-color: #f7f6fb; 
 }
 
 /**********Offers section************************/
@@ -693,6 +711,14 @@ h2{
     /* font-size: 20px!important; */
     /* font-weight: 300; */
 }
+.blueBorder th, .blueBorder td {
+
+    border-bottom: 16px solid #f7f6fb;
+  }
+.whiteBorder th, .whiteBorder td {
+
+    border-bottom: 16px solid #ffffff;
+  }
 
 .fas-black{
   color: black!important;
