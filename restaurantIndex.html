@@ -122,10 +122,54 @@
             <div class="page-content-wrapper visitorsOverviewRes ">            
 
                 <div class="container-fluid">
-                    <h2>Visitors per week</h2>            
-                    <span class="label">Total models </span>  
-                    <span class="value" id="totalModels"></span>
-
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Visitors per week</h2>            
+                        </div>
+                        <div class="col-6 text-center">
+                             <button type="button" id="editDaysButton" mode="edit" class="btn btn-secondary btn-linkModal" data-dismiss="modal">edit</button>
+                        </div>
+                        <div class="col-10">
+                            <table class="table contentTable"  cellspacing="0">
+                              <tr class="">
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>                      
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                              </tr>
+                              <tr>
+                                <td>Lunch</td>
+                                <th><input class="dailyVisitors" readonly="true" value="1" type="number" /></th>
+                                <th><input class="dailyVisitors" readonly="true" value="3" type="number"/></th>                     
+                                <th><input class="dailyVisitors" readonly="true" value="7" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="2" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="3" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="1" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="2" type="number"/></th>
+                              </tr>
+                              <tr>
+                                <td>Dinner</td>
+                                <th><input class="dailyVisitors" readonly="true" value="1" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="3" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="1" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="4" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="1" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="2" type="number"/></th>
+                                <th><input class="dailyVisitors" readonly="true" value="6" type="number"/></th>
+                              </tr>
+                            </table>       
+                        </div>         
+                    </div>    
+                    <div class="row">
+                        <div class="col-10 text-center">
+                            <i class="fas fa-chevron-down" id="modelsRankingMore"></i>
+                        </div>
+                    </div>     
+                </div>
                     <div class="row">
 
                         <div class="col-4">
@@ -154,7 +198,7 @@
                             <h2>Offers</h2>   
                         </div>
                         <div class="col-6 text-center">
-                    <button type="button" id="editButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">edit</button>
+                             <button type="button" id="editButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">edit</button>
                         </div>
                     </div>
                     <span class="rank">Babymodel</span>

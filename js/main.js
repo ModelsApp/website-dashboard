@@ -132,6 +132,22 @@ $("#editButton").click(function(){
 });
 
 
+$("#editDaysButton").click(function(){
+  if($("#editDaysButton").attr("mode")=="edit"){
+    $("#editDaysButton").attr("mode","save");
+    $('.dailyVisitors').prop('readonly', false);
+    $("#editDaysButton").text("save")
+
+  }else{
+    $("#editDaysButton").attr("mode","edit");
+    $('.dailyVisitors').prop('readonly', true);
+    $("#editDaysButton").text("edit")
+
+  }
+
+});
+
+
 $("#uploadButton").click(function(){
   linkSelected.removeClass("fa-cloud-upload-alt");
   linkSelected.addClass("fa-link");

@@ -622,7 +622,7 @@ h2{
 }
 /***************Restaurant panel*****************/
 
-
+.
 #restaurant_name{
   color: black!important;
   font-size: 24px;
@@ -632,6 +632,21 @@ h2{
 
 .rankingOverviewRes {
    background-color: #f7f6fb; 
+}
+
+
+.dailyVisitors{
+  border: none;
+  border-color: transparent;
+  padding: 0.75rem;
+  /* vertical-align: middle; */
+  text-align: center;
+  color: #555555;
+  font-size: 20px!important;
+  font-weight: 300!important;
+  /* text-align: center; */
+  font-size: 20px!important;
+  width: 60px;
 }
 
 /**********Offers section************************/
