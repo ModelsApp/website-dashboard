@@ -136,11 +136,15 @@ $("#editDaysButton").click(function(){
   if($("#editDaysButton").attr("mode")=="edit"){
     $("#editDaysButton").attr("mode","save");
     $('.dailyVisitors').prop('readonly', false);
+    $('.dailyVisitors').css('color', "#87cf7f");
+
     $("#editDaysButton").text("save")
 
   }else{
     $("#editDaysButton").attr("mode","edit");
     $('.dailyVisitors').prop('readonly', true);
+        $('.dailyVisitors').css('color', "#555555");
+
     $("#editDaysButton").text("edit")
 
   }
