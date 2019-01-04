@@ -9,11 +9,10 @@
     <meta name="author" content="">
 
     <title>Restaurant panel</title>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
 
     <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery.min.css">
     <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.structure.min.css">
@@ -154,14 +153,14 @@
                         <div class="col-6">
                             <h2>Offers</h2>   
                         </div>
-                        <div class="col-6">
-                            <i class="fas fa-pen" id="editOffers"></i>
+                        <div class="col-6 text-center">
+                    <button type="button" id="editButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">edit</button>
                         </div>
                     </div>
                     <span class="rank">Babymodel</span>
 
                     <div class="row offersRow">
-                        <div class="col-3 cardCol">
+                        <div class="col-4 cardCol">
                             <div class="card ">
                               <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
                               <div class="card-body">
@@ -170,7 +169,7 @@
                               </div>
                             </div>                            
                         </div>
-                        <div class="col-3 cardCol">
+                        <div class="col-4 cardCol">
                             <div class="card " >
                               <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
                               <div class="card-body">
@@ -185,7 +184,7 @@
                     <span class="rank">Good model magnet</span>
 
                     <div class="row offersRow">
-                        <div class="col-3 cardCol">
+                        <div class="col-4 cardCol">
                             <div class="card " >
                               <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
                               <div class="card-body">
@@ -194,7 +193,7 @@
                               </div>
                             </div>                            
                         </div>
-                        <div class="col-3 cardCol" >
+                        <div class="col-4 cardCol" >
                             <div class="card " >
                               <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
                               <div class="card-body">
@@ -203,7 +202,7 @@
                               </div>
                             </div>
                         </div>
-                        <div class="col-3 cardCol">
+                        <div class="col-4 cardCol">
                             <div class="card">
                               <img class="card-img-top" src="./img/download.svg" alt="Card image cap">
                               <div class="card-body">
@@ -390,19 +389,24 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Insert Link Here</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit offer</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body insertLinkModalBody">
+                <div class="modal-body editOfferModalBody">
+                    <label id="editOfferName"for="exampleInputEmail1" class="modalLabel">Name</label>
+                   
                     <input class="form-control input-insertLinkModal" type="text">
-                    <input class="form-control input-insertLinkModal" type="text">
-                    <input class="form-control input-insertLinkModal" type="text">
-
+                    <label for="exampleInputEmail1" class="modalLabel">Offer</label>
+                     <textarea id="editOfferText" class="form-control input-insertLinkModal editOfferText" type="text"> </textarea>
+                    <div class="pricingContainer">
+                        <label editPriceTextfor="exampleInputEmail1" class="modalLabel">Pricing</label>
+                        <input id="editOfferPricin" class="form-control input-insertLinkModal " type="number">
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="uploadButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">Upload</button>
+                    <button type="button" id="uploadButton" class="btn btn-secondary btn-linkModal" data-dismiss="modal">Confirm</button>
                 </div>
             </div>
         </div>

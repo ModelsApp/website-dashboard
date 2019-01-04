@@ -127,6 +127,11 @@ $(".fa-cloud-upload-alt").click(function(){
 });
 
 
+$("#editButton").click(function(){
+  $('#editOfferModal').modal('show')
+});
+
+
 $("#uploadButton").click(function(){
   linkSelected.removeClass("fa-cloud-upload-alt");
   linkSelected.addClass("fa-link");

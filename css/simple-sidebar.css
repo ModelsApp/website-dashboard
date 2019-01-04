@@ -323,20 +323,44 @@ h2{
 
 }
 
+.pricingContainer{
+  padding-right: 100px;
+  padding-left: 100px;
+  text-align: center;
+  padding-top: 80px;
+}
+
 .btn-linkModal{
-  background-color: #eddfed;
+  background-color: #ededed;
   color: black;
   width: 100px;
   border-color: transparent;
 }
 
-.input-insertLinkModal{background-color: #d1d1d1;}
-
+.input-insertLinkModal{background-color: #ededed;}
+.editOfferModalBody{
+  padding-top: 30px;
+  padding-bottom: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .insertLinkModalBody{
   padding-top: 100px;
   padding-bottom: 100px;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+.editOfferText{
+  height: 140px;
+}
+
+.modalLabel{
+  font-size: 14px;
+}
+
+.editPriceText{
+  width: 40px;
 }
 /**********Members section************************/
 .members{
@@ -595,13 +619,12 @@ h2{
 /**********Offers section************************/
 
 .offersRow{
-  padding:20px;
-
+  padding-top: 20px;
 }
 
 
 .cardCol{
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 #editOffers{
   float:right;
