@@ -117,7 +117,9 @@
 
                 </div>
                 <div class="container-fluid">
-                    <div id='map' style='width: 1200px; height: 500px;'></div>
+                    <div class="row">
+
+                    <div id='map' style='width: 100%; height: 500px;'></div>
                     <script>
                         mapboxgl.accessToken = 'pk.eyJ1Ijoic3RhbmlzbGF1c2FraGFyY2h1ayIsImEiOiJjanEyNGxxamwwMWR1M3hxaGs0MWw1ZTBpIn0.4J8GfNHWbIRbfxgXlrpGmg';
                         var map = new mapboxgl.Map({
@@ -127,6 +129,7 @@
                             zoom: 9 // starting zoom
                         });
                     </script>
+                </div>
 
                 </div>
             </div>
@@ -310,7 +313,7 @@
                                         <img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
                                         <br>
                                         <div class="col-2 align-self-center deleteUser" style="">
-<img class="pendingMemberRemove" src="./img/multiply.png">                                   
+                                                <img class="pendingMemberRemove" src="./img/multiply.png">                                   
                                         </div>                                        
                                     </td>
                                     <td>
@@ -379,10 +382,11 @@
                                     </td>
                                 </tr>
                                 <tr class="approvePanel">
-                                    <td><img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
-                                                                         <br>
+                                    <td>
+                                        <img class="img-circle contentTablePhoto" src="./img/placeholder.jpg">
+                                        <br>
                                         <div class="col-2 align-self-center deleteUser" style="">
-<img class="pendingMemberRemove " src="./img/multiply.png">                                        </div>    
+                                        <img class="pendingMemberRemove " src="./img/multiply.png"></div>    
                                     </td>
                                     <td><i class="fas fas-black fa-cloud-upload-alt linkIcon"></i>
                                         <div class="container reviewContainer">
@@ -394,8 +398,6 @@
                                             </div>
                                         </div>
                                     </td>
-
-
                                     <td><i class="fas fas-black fa-link linkIcon"></i>
                                         <div class="container reviewContainer">
                                             <div class="row">
@@ -460,12 +462,11 @@
                                         </div>
                                     </td>
                                 </tr>
+                            </table>
                         </div>
-                        </table>
                     </div>
                 </div>
             </div>
-        </div>
         <div class="page-content-wrapper fullrecordContent">
             <div class="container-fluid">
                 <div class="row">

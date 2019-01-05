@@ -11,11 +11,13 @@
     <title>Restaurant panel</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="css/fonts.css" rel="stylesheet">
 
     <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery.min.css">
     <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.theme.min.css">
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -64,7 +66,7 @@
             <div class="sticky-top overviewSelector">
                 <div class="container-fluid">
                     <div class="row text-center tabSelector">
-                        <div class="col-4"><span id="overview_res_tab" class="sectionTab sectionTabSelected">Overview<span></div>
+                        <div class="col-4"><span id="overview_res_tab" class="sectionTab sectionTabSelected">Overview</span></div>
                         <div class="col-4"><span id="reviews_res_tab" class="sectionTab">Reviews</span></div>
                         <div class="col-4"><span id="content_res_tab" class="sectionTab">Content</span></div>
                     </div>
@@ -169,7 +171,6 @@
                             <i class="fas fa-chevron-down" id="modelsRankingMore"></i>
                         </div>
                     </div>     
-                </div>
                     <div class="row">
 
                         <div class="col-4">
@@ -279,7 +280,7 @@
             <div class="page-content-wrapper">
                 <div class="container-fluid" id="reviewsScroll">
                     <div class="row text-center">
-                        <div class="col-6"><span id="" class=" serviceTab serviceTabSelected ">Trip advisor<span></div>
+                        <div class="col-6"><span id="" class=" serviceTab serviceTabSelected ">Trip advisor</span></div>
                         <div class="col-6"><span id="" class="serviceTab">Google Places Post</span></div>
                     </div>
                 </div>
@@ -294,7 +295,7 @@
                 </div>                            
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-12">
                             <table class="table contentTable blueBorder"  cellspacing="0">
                               <tr class="headerModelsRanking">
                                 <th></th>
@@ -324,7 +325,7 @@
                         </div>         
                     </div>    
                     <div class="row">
-                        <div class="col-10 text-center">
+                        <div class="col-12 text-center">
                             <i class="fas fa-chevron-down" id="modelsRankingMore"></i>
                         </div>
                     </div>     
@@ -333,7 +334,7 @@
             <div class="page-content-wrapper" id="contentScroll">
                 <div class="container-fluid">
                     <div class="row text-center">
-                        <div class="col-10"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Restaurant content<span></div>
+                        <div class="col-10"><span id="daily_tab" class=" sectionTab sectionTabSelected ">Restaurant content</span></div>
                     </div>
                 </div>
             </div> 
@@ -371,7 +372,6 @@
                     </div>         
                 </div>           
             </div>        
-
         </div>
 
         <div id="sectionContentRes">
@@ -384,22 +384,23 @@
             </div>      
             <div class="page-content-wrapper">
                 <div class="container-fluid text-center">
-                    <!---
                     <div class="row">
-                        <input type="text" class="dateSelected"id="dateSelector" value="13/07/2018">
-                        <div> <i class="fas fa-chevron-down" ></i></div>
+                        <div class="col-12">
+                             <input  autocomplete="off" readonly="true" type="text" class="dateSelected" value="01 January" id="datepicker">
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
 
-
-                    ---->
-                    <span class="dateSelected">3rd July</span>
-                    <i class="fas fa-chevron-down" ></i>
+                    <i id="dayPickerButton" class="fas fa-chevron-down" ></i>
+                        </div>
+                     </div>
                 </div>
             </div>          
             <div class="page-content-wrapper">
                  <div class="container-fluid">
                      <div class="row">
-                        <div class="col-10">
+                        <div class="col-12">
                          <table class="table contentTable">
                            <tr class="contentHeader">
                              <th></th>
@@ -422,9 +423,83 @@
                      </div>         
                  </div> 
             </div>   
+        </div>
+        <div id="sectionWalletRes">
+            <div class="page-content-wrapper walletReport">
+                <div class="container-fluid ">
+                    <div class="row text-center">
+                        <div class="col-12   text-center">
+                            <h2 style="color:#ffb8be" class="walletHeader align-self-center">Wallet</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid  walletContainer">
+                    <div class="row text-left walletRow">
+                        <div class="col-3">
+                            <span class="labelBlack">Credits given</span>
+                            <br>
+                            <span class="labelGray" id="credits_given"></span>
+                        </div>
+                        <div class="col-3">
+                            <span class="labelBlack">Credits back</span>
+                            <br>
+                            <span class="labelGray" id="credits_back"></span>
+                        </div>
+                        <div class="col-3">
+                            <span class="labelBlack">Maps reviews</span>
+                            <br>
+                            <span class="labelGray" id="maps_reviews"></span>
+                        </div>
+                    </div>
+                    <div class="row walletRow">
+                        <div class="col-3">
+                            <span class="labelBlack">Insta Stories</span>
+                            <br>
+                            <span class="labelGray" id="insta_stories"></span>
+                        </div>
+                        <div class="col-3">
+                            <span class="labelBlack">Trip reviews</span>
+                            <br>
+                            <span class="labelGray" id="trip_reviews"></span>
+                        </div>
+                    </div>
+                    <div class="row walletRow">
+                        <div class="col-3">
+                            <span class="labelBlack">Insta Posts</span>
+                            <br>
+                            <span class="labelGray" id="insta_posts"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="page-content-wrapper walletRanking">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-10">
+                            <table class="table contentTable">
+                                <tr class="contentHeader">
+                                    <th></th>
+                                    <th>Month</th>
+                                    <th>Credits</th>
+                                    <th>Plan</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td><img class="img-circle" src="./img/placeholder.jpg"></td>
+                                    <td>123</td>
+                                    <td>75</td>
+                                    <td>55</td>
+                                    <td>1200</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
-
         <!-- /#page-content-wrapper -->
 
     </div>
@@ -458,7 +533,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <script src="js/main.js"></script>
 
     <script src="js/restaurantpanel.js"></script>

@@ -72,12 +72,24 @@ function changeSection(){
 	$( "#sectionContentRes").hide();
 	$( "#sectionWalletRes").hide();
 	$( "#sectionMembersRes").hide();
+  $( "#sectionWalletRes").hide();
 
 }
 
 
 changeSection();
 loadData(json);
+$('#datepicker').datepicker({
+
+dateFormat: 'dd MM',
+
+});
+
+$("#dayPickerButton").click(function() {
+  $("#datepicker").datepicker("show");
+});
+
+
 $( "#sectionOverviewRes").show();
 
 $( "#load_profile_res" ).click(function() {
@@ -89,8 +101,9 @@ $( "#load_overview_res" ).click(function() {
   	$( "#sectionOverviewRes").show();
 });
 $( "#load_wallet_res" ).click(function() {
+    console.log("aaa");
 	changeSection();
-  	$( "#sectionWallet").show();
+  	$( "#sectionWalletRes").show();
 });
 
 $( "#load_content_res" ).click(function() {
