@@ -59,7 +59,7 @@ var growthChart = new Chart(growthChart, {
         pointBorderColor : '#aaaaaa',
             lineTension: 0,           
 
-        label:"2013"},
+        label:"New Members"},
 ]
     },
     fill: false,

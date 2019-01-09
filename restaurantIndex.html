@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,12 +31,13 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <h2 id="restaurant_name"></h2>
-
                 <li class="sidebar-brand profilePhoto" style="margin-bottom: 80px;">
-                    <a href="#">
+                    <a style="margin-left:60px"href="#">
                         <img class="img-profile " src="./img/placeholder.jpg">
                     </a>
+                <h2 id="restaurant_name"></h2>
+
+
                 </li>
 
                 <li>
@@ -562,6 +563,40 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="addRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add restaurant</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body addRestaurantModalBody">
+                    <input class="form-control input-insertLinkModal" type="text">
+
+                <div class="row">
+                    <div class="col-6">
+                        <p id="addRestaurantName" class="addRestaurantNameLabel">Sunrina Porfirova</p>
+                        <p id="addRestaurantDescription" class="addRestaurantDescriptionLabel">Via dei Mille 203</p>
+
+                        <p id="addRestaurantAddress" class="addRestaurantAddressDescriptionLabel">Via dei Mille 203</p>
+
+                    </div>
+                    <div class="col-6">
+                    </div>
+
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="approveNo" class="btn btn-linkModal" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>

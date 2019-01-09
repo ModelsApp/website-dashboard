@@ -63,6 +63,8 @@ var json = {
     }
   }
 }
+
+var selectedPendingMember;
 // require("./data.json")
 function changeSection(){
 	$( "#sectionProfile").hide();
@@ -176,16 +178,25 @@ $("#daily_tab").click(function() {
 $.getJSON("./js/data.json",function(json){
 	console.log(json)
 });
-
-$(".pendingMemberItem").click(function() {
-  console.log("Aaa");
-  changeSection();
-  $("#sectionMemberDescription").show();
+$("#addRestaurantButton ").click(function() {
+  $('#addRestaurantModal').modal('show')
 
 });
 
+$(".pendingMemberItem").click(function() {
+  console.log("Aaa");
+  selectedPendingMember = $(this)
+  changeSection();
+  $("#sectionMemberDescription").show();
+  //$('#approveMemberModal').modal('show')
+});
 
-
+$("#approveYes").click(function() {
+  //selectedPendingMember.hide();
+});
+$("#approveNo").click(function() {
+  //selectedPendingMember.hide();
+});
 
 $("#overview_tab").click(function() {
     $(".sectionTab" ).removeClass("sectionTabSelected");
