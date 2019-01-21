@@ -1,0 +1,469 @@
+.supportList {
+  list-style-type: none;
+}
+
+.diagonalDividerBottom{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);transform: translateY(-110px);clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);}
+.diagonalDividerTop{
+-webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);
+clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);}
+
+
+.diagonalDividerFull{
+-webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 89%);
+}
+
+@media only screen and (max-width: 768px) {
+.diagonalDividerBottom{
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+  }
+.diagonalDividerTop{
+-webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);}
+
+
+.diagonalDividerFull{
+-webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+}
+}
+
+.grayDivider{
+  background-color: 
+}
+.logoImage{
+  height: 300px;
+  width: auto;
+}
+
+.logoContainer{
+  padding-bottom: 5rem;
+}
+.brandContainer{
+	background-color: black;
+	/* padding-top: 40px; */
+	/* padding-bottom: 100px; */
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
+.playerContainer{
+	background-color: #f3f5f9;
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
+.statsContainer{
+	/* padding-top: 150px; */
+	/* padding-bottom: 150px; */
+}
+
+.alignStat1{
+  margin-left: 18px;
+}
+.alignStat2{
+  margin-left:20px;
+  margin-bottom: 10px;
+}
+.alignStat3{
+  margin-left:20px;
+  margin-bottom: 10px;
+}
+.statsTitle{
+  padding-top: 20px;
+  font-weight: bold;
+  color: rgb(106, 106, 106);
+}
+
+.percentage {
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 9pt;
+  font-size: 40px;
+  color: #fff;
+  /* text-align: center; */
+  display: inline-block;
+}
+
+.stat1{
+	width: 300px;
+	height: 300px;
+	line-height: 300px;
+	border-color: #d12881;
+	color: #d12881;
+
+}
+
+.stat2{
+	width: 250px;
+	height: 250px;
+	line-height: 250px;
+	border-color: #902a7b;
+	color: #902a7b;
+
+}
+
+.stat3{
+	width: 200px;
+	height: 200px;
+	line-height: 200px;
+	border-color: #462b74;
+	color: #462b74;
+
+}
+
+
+.stat1Container{
+
+}
+
+
+.stat2Container{
+	
+	padding-top: 100px;
+
+}
+
+
+.stat3Container{
+	
+padding-top: 190px;
+}
+
+
+.cardShadow{
+  height: 390px;padding: 20px;margin-bottom: 30px;
+-webkit-box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+-moz-box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+border: 0px solid rgba(0,0,0,0);
+
+}
+
+@media only screen and (min-width: 768px) {
+.cardShadow{width: 300px;}
+
+
+}
+
+
+
+
+.cardShadowFeatures{-webkit-box-shadow: 0px 8px 8px 0px rgba(108,4,119,0.81);-moz-box-shadow: 0px 8px 8px 0px rgba(108,4,119,0.81);box-shadow: 0px 8px 8px 0px rgba(108,4,119,0.81);}
+
+}
+.imageContainer{
+  padding:70px!important;
+}
+.cardTitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-weight : bold;
+  font-size : 20px;
+  color : #000000;
+  color: rgb(106, 106, 106);
+  /* color : rgb(0, 0, 0); */
+}
+.card-img-top{
+  width: 180px;
+}
+.cardSubtitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-size: 15px;
+  color : #4D4D4D;
+  color : rgb(77, 77, 77);
+  /* padding-bottom: 20px; */
+}
+
+
+.playerTitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-weight : bold;
+  font-size: 42px;
+  color : #D12881;
+  color : rgb(209, 40, 129);
+  padding-bottom: 4rem;
+}
+
+
+.gamificationContainer{
+	background-color: #902a7b;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	z-index: 9999;
+	height: 670px;
+}
+
+.gamificationTitle
+{
+  font-family : GT Walsheim Pro,Times, serif, Arial;
+  font-size : 21px;
+  color : #FFFFFF;
+  color : rgb(255, 255, 255);
+}
+.gamificationImage
+{
+	background-image: url("img/game.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.brandTitle{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-weight : bold;
+  font-size: 42px;
+  color : #D12881;
+  color : rgb(209, 40, 129);
+}
+
+.navbar{
+  z-index: 9999;
+}
+
+.bg-dark {
+    background-color: #000000!important;
+}
+
+.nav-item{
+  color: white;
+}
+nav.navbar.static-top {}
+.brandSubtitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-size: 18px;
+  color : #FFFFFF;
+  color : rgb(255, 255, 255);
+}
+
+.featureIcon{
+    height: 60px!important;
+    width: 60px!important;
+  }
+.brandImage{
+  width: 60%;
+  height:auto;
+  opacity: 0.7;
+}
+.featureText{
+}
+@media only screen and (min-width: 768px) {
+
+  .featureText {
+      text-align: left!important;
+      padding-left: 140px;
+  }
+}
+.featuresContainer{
+	background-color: #f3f5f9;
+	transform: translateY(-170px);
+	 padding-bottom: 100px;
+   padding-top: 100px;
+
+}
+#gameBackground{
+    transform: translateY(-80px);
+  background-image: url(../img/gameDarkened.png);
+     background-repeat: no-repeat;
+     background-size: cover
+
+
+}
+@media only screen and (min-width: 768px) {
+
+#gameBackground{
+        transform: translateY(-80px);
+        background-image: url(../img/game.jpg);
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: 90% 0%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+
+
+  .featuresContainer{
+  /* height: 800px; */
+  padding-bottom: 100px;
+  padding-top: 100px;
+  }
+}
+.featureIconContainer{
+  padding: 20px;
+  margin-top: 40px;
+}
+.featuresTitle
+{
+  font-family: Arial;
+  font-weight : bold;
+  font-size: 30px;
+  color : #D12881;
+  color : rgb(209, 40, 129);
+}
+
+.featuresCardBody{
+  /* min-height: 400px; */
+  padding-bottom: 20px;
+  /* padding: 4.25rem!important; */
+}
+.featuresCard{
+	background-color: white;
+
+}
+
+.bottomCard{
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+.bottomCard{
+  margin-top: 200px;
+}
+
+}
+
+.brandsContainer{
+	/* background-color: #ffffff; */
+	/* padding-top: 40px; */
+	/* padding-bottom: 100px; */
+}
+
+.brandsTitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-weight : bold;
+  font-size: 42px;
+  color : #FFFFFF;
+  padding-bottom: 20px;
+  color: rgb(209, 40, 129);
+}
+
+.supportContainer{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url(../img/bannerMobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+@media only screen and (min-width: 768px) {
+  .supportContainer{
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+      padding-top: 200px;
+      padding-bottom: 200px;
+      transform: translateY(93px);
+
+  }
+
+
+ }
+ .supportItem{
+   padding-bottom: 1rem;
+ }
+
+.supportTitle {
+    font-family: GT Walsheim Pro,Times, serif,Arial;
+    font-weight: bold;
+    font-size: 30px!important;
+    color: #D12881;
+    margin-bottom: 7rem;
+}
+
+ @media only screen and (min-width: 768px) {
+  .supportTitle {
+      font-family: GT Walsheim Pro,Times, serif,Arial;
+      font-weight: bold;
+      font-size: 42px;
+      color: #D12881;
+      line-height: 3.8rem;
+      margin-bottom: 7rem;
+  }
+  .supportItem{
+    padding-bottom: 1rem;
+    margin-left: 10px;
+
+  }
+
+}
+ @media only screen and (min-width: 768px) {
+  .featureIconMargin{
+  margin-top: 80px;
+
+  }
+
+}
+
+
+.supportText{
+}
+.supportIconContainer{
+    height: 60px!important;
+    width: 60px!important;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 2pt;
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #d22382;
+    /* border-color: #902a7b; */
+    /* color: #7d6161; */
+  }
+
+
+
+.supportIcon {
+  height: 35px!important;
+  width: auto;
+  margin-top: 10px;
+  color: white;
+}
+
+.footerContainer{
+	background-color: #902a7b;
+	padding-top: 300px;
+	/* transform: translateY(-30px); */
+	padding-bottom: 300px;
+	z-index: 70000;
+}
+
+.footerTitle
+{
+  font-family : GT Walsheim Pro,Times, serif,Arial;
+  font-weight : bold;
+  font-size : 20px;
+  color : #FFFFFF;
+  color : rgb(255, 255, 255);
+}
+
+.fa {
+  /* padding: 20px; */
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+
+}
+
+
+footer{
+  background-color: #462b74;
+  color: white;
+  padding: 20px;
+}

@@ -25,3 +25,51 @@
        url('../fonts/open-sans-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('../fonts/open-sans-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@font-face {
+    font-family: 'GTWalsheimProMedium';
+    src: url('../fonts/GTWalsheimProMedium.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProRegular';
+    src: url('../fonts/GTWalsheimProRegular.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProUltraBold-Oblique';
+    src: url('../fonts/GTWalsheimProUltraBold-Oblique.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProUltraBold-Oblique.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProBold';
+    src: url('../fonts/GTWalsheimProBold.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProUltraBold';
+    src: url('../fonts/GTWalsheimProUltraBold.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProUltraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GTWalsheimProLight';
+    src: url('../fonts/GTWalsheimProLight.woff2') format('woff2'),
+        url('../fonts/GTWalsheimProLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
