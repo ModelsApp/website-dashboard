@@ -72,6 +72,8 @@ function changeSection(){
 	$( "#sectionContent").hide();
 	$( "#sectionWallet").hide();
 	$( "#sectionMembers").hide();
+  $( "#sectionContacts").hide();
+
   $("#sectionMemberDescription").hide();
 }
 

@@ -2,6 +2,12 @@
   list-style-type: none;
 }
 
+.venuesList{
+  padding-top: 1rem;
+  list-style-type: none;
+
+}
+
 .diagonalDividerBottom{-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);transform: translateY(-110px);clip-path: polygon(0 0, 100% 0, 100% 100%, 0 89%);}
 .diagonalDividerTop{
 -webkit-clip-path: polygon(0 0, 100% 11%, 100% 100%, 0 100%);
@@ -140,6 +146,22 @@ box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
 border: 0px solid rgba(0,0,0,0);
 
 }
+.cardShadowPlan{
+padding: 20px;margin-bottom: 30px;
+-webkit-box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+-moz-box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+box-shadow: 21px 24px 33px -11px rgba(242,217,240,1);
+border: 0px solid rgba(0,0,0,0);
+
+}
+.cardPrice{
+  font-family: GT Walsheim Pro,Times, serif,Arial;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    color: rgb(106, 106, 106);
+    /* color: rgb(0, 0, 0); */
+}
 
 @media only screen and (min-width: 768px) {
 .cardShadow{width: 300px;}
@@ -164,6 +186,9 @@ border: 0px solid rgba(0,0,0,0);
   color : #000000;
   color: rgb(106, 106, 106);
   /* color : rgb(0, 0, 0); */
+}
+.purpleTitle{
+  color: rgb(209, 40, 129);
 }
 .card-img-top{
   width: 180px;
@@ -405,6 +430,7 @@ nav.navbar.static-top {}
     height: 60px!important;
     width: 60px!important;
     border-style: solid;
+    margin-right: 10px;
     border-radius: 50%;
     border-width: 2pt;
     font-size: 45px;
@@ -466,4 +492,71 @@ footer{
   background-color: #462b74;
   color: white;
   padding: 20px;
+}
+
+.venuesContainer{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.venuesBulletpoint{
+    height: 20px!important;
+    width: 20px!important;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 2pt;
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    border-color: #d22382;
+    /* border-color: #902a7b; */
+    /* color: #7d6161; */
+  }
+
+  .venuesTitle{
+    font-family : GT Walsheim Pro,Times, serif,Arial;
+    font-weight : bold;
+    font-size: 42px;
+    color : #D12881;
+    color : rgb(209, 40, 129);
+    padding-top: 1rem;
+  }
+
+  .venuesTitle{
+      font-family : GT Walsheim Pro,Times, serif,Arial;
+      font-weight : bold;
+      font-size: 42px;
+      color : #D12881;
+      color : rgb(209, 40, 129);
+      /* padding-bottom: 2rem; */
+      padding-top: 2rem;
+    }
+@media only screen and (min-width: 768px) {
+
+.phoneScreen{
+  width: 80%; 
+}
+  .venuesTitle{
+      font-family : GT Walsheim Pro,Times, serif,Arial;
+      font-weight : bold;
+      font-size: 42px;
+      color : #D12881;
+      color : rgb(209, 40, 129);
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+    }
+  }
+
+
+
+
+.appScreenContainer{
+    background-color: #902a7b;
+
 }
