@@ -247,6 +247,35 @@ $(".dropdown-menu li a").click(function(){
   $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
 });
 
+
+$("#businessCard").click(function() {
+window.location.href = "venues.html";
+
+});
+$("#modelsCard").click(function() {
+window.location.href = "models.html";
+
+});
+$("#brandsCard").click(function() {
+window.location.href = "brands.html";
+
+});
+
+$("#basicPlan").click(function() {
+  $("#paymentModal").modal()
+  $("#plan").val("Basic plan")
+});
+$("#growthPlan").click(function() {
+  $("#paymentModal").modal()
+  $("#plan").val("Growth plan")
+});
+$("#energyPlan").click(function() {
+  $("#paymentModal").modal()
+  $("#plan").val("Energy plan")
+});
+
+
+
 function scrollTo(id){
     var elmnt = document.getElementById(id);
     elmnt.scrollIntoView(true);
