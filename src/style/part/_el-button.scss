@@ -1,0 +1,53 @@
+.el-button {
+  padding: 15px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-family: "Circular Std Book", sans-serif;
+  border: none;
+  color: $color-4;
+  transition: .15s background, .15s color, .15s border;
+}
+
+.el-button a {
+  color: inherit;
+}
+
+.el-button--info {
+  background-color: $color-info;
+}
+
+.el-button--primary {
+  background: $color-1;
+  color: $color-4;
+  &:hover {
+    background: $color-1;
+    color: $color-4;
+  }
+}
+
+.el-button.big {
+  min-width: 178px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.icon-plus {
+  padding-left: 5px;
+  font-size: 24px;
+}
+
+.el-button--danger {
+
+}
+
+.el-button--danger.is-plain {
+  border: 1px solid $color-1;
+  color: $color-1;
+  background: none;
+  &:hover {
+    background: rgba($color-1, .05);
+    color: $color-1;
+  }
+}

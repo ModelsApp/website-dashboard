@@ -1,0 +1,35 @@
+@import "../var";
+
+.el-table {
+  font-family: "Circular Std", sans-serif;
+  font-size: 20px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.el-table .el-table__fixed {
+  width: 100% !important;
+}
+
+.el-table .el-button {
+  display: inline-flex;
+}
+
+.el-table .el-table__body tr.hover-row>td {
+  background: transparent;
+}
+
+.el-table  th {
+  background: $color-1;
+  height: 73px;
+  opacity: 0.7;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.table-img {
+  width: 113px;
+  height: 113px;
+  border-radius: 10px;
+}

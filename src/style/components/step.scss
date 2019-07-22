@@ -1,0 +1,38 @@
+@import "../var";
+
+.el-step__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  border: 1px solid rgba(#979797, .5);
+  font-family: "Circular Std Book", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: $color-2;
+}
+
+.el-step__icon.is-text {
+  border: 1px solid #cbcbcb;
+}
+
+.el-step__head.is-process .el-step__icon {
+  background-color: #f2f2f2;
+}
+
+.el-step__head.is-finish .el-step__icon {
+  background-color: #f2f2f2;
+}
+
+.el-step.is-horizontal .el-step__line {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.el-step__head.is-finish {
+  border-color: #d8d8d8;
+}
+
+.el-step__icon-inner:after {
+  content: ".";
+  margin-right: -8px;
+}
